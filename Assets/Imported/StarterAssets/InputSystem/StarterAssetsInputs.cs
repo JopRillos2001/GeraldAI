@@ -20,18 +20,22 @@ namespace StarterAssets
 		public bool cursorLocked = true;
 		public bool cursorInputForLook = true;
 
-		private bool canMove;
-		private bool canJump;
+		private bool canMove = true;
+		private bool canLook = true;
+		private bool canJump = true;
+		private bool canSprint = true;
 
 #if ENABLE_INPUT_SYSTEM
 		public void OnMove(InputValue value)
 		{
-			MoveInput(value.Get<Vector2>());
+			if (canMove) {
+				MoveInput(value.Get<Vector2>());
+			}
 		}
 
 		public void OnLook(InputValue value)
 		{
-			if(cursorInputForLook)
+			if(cursorInputForLook && canLook)
 			{
 				LookInput(value.Get<Vector2>());
 			}
@@ -39,12 +43,16 @@ namespace StarterAssets
 
 		public void OnJump(InputValue value)
 		{
-			JumpInput(value.isPressed);
+			if (canJump) {
+				JumpInput(value.isPressed);
+			}
 		}
 
 		public void OnSprint(InputValue value)
 		{
-			SprintInput(value.isPressed);
+			if (canSprint) {
+				SprintInput(value.isPressed);
+			}
 		}
 #endif
 
@@ -77,6 +85,31 @@ namespace StarterAssets
 		private void SetCursorState(bool newState)
 		{
 			Cursor.lockState = newState ? CursorLockMode.Locked : CursorLockMode.None;
+		}
+
+		public void stopMoving() {
+			stopMove();
+			look = Vector2.zero;
+			jump = false;
+			sprint = false;
+		}
+		public void offMove() {
+			canJump = false;
+			canMove = false;
+			canLook = false;
+			canSprint = false;
+		}
+		public void onMove() {
+			canJump = true;
+			canMove = true;
+			canLook = true;
+			canSprint = true;
+		}
+		public void autoMove(Vector2 direction) {
+			move = direction;
+		}
+		public void stopMove() {
+			move = Vector2.zero;
 		}
 	}
 	

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class StartRoomSceneManager : MonoBehaviour
 {
+    private GameObject player;
     private static StartRoomSceneManager _instance;
 
     public static StartRoomSceneManager Instance
@@ -22,4 +23,11 @@ public class StartRoomSceneManager : MonoBehaviour
             _instance = this;
         }
     }
+
+    private void Start() {
+        player = GameObject.FindGameObjectWithTag("Player");
+        player.GetComponent<StarterAssets.StarterAssetsInputs>().offMove();
+    }
+
+    
 }

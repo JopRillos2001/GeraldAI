@@ -36,12 +36,15 @@ namespace StarterAssets
 		[Header("Player Grounded")]
 		[Tooltip("If the character is grounded or not. Not part of the CharacterController built in grounded check")]
 		public bool Grounded = true;
+		[Tooltip("If the character is on a conveyorbelt or not.")]
+		public bool OnConveyor = false;
 		[Tooltip("Useful for rough ground")]
 		public float GroundedOffset = -0.14f;
 		[Tooltip("The radius of the grounded check. Should match the radius of the CharacterController")]
 		public float GroundedRadius = 0.5f;
 		[Tooltip("What layers the character uses as ground")]
 		public LayerMask GroundLayers;
+		public LayerMask ConveyorLayer;
 
 		[Header("Cinemachine")]
 		[Tooltip("The follow target set in the Cinemachine Virtual Camera that the camera will follow")]
@@ -63,6 +66,7 @@ namespace StarterAssets
 		// timeout deltatime
 		private float _jumpTimeoutDelta;
 		private float _fallTimeoutDelta;
+		private bool preConvey;
 
 	
 #if ENABLE_INPUT_SYSTEM
@@ -115,6 +119,7 @@ namespace StarterAssets
 			JumpAndGravity();
 			GroundedCheck();
 			Move();
+			Convey();
 		}
 
 		private void LateUpdate()
@@ -127,6 +132,7 @@ namespace StarterAssets
 			// set sphere position, with offset
 			Vector3 spherePosition = new Vector3(transform.position.x, transform.position.y - GroundedOffset, transform.position.z);
 			Grounded = Physics.CheckSphere(spherePosition, GroundedRadius, GroundLayers, QueryTriggerInteraction.Ignore);
+			OnConveyor = Physics.CheckSphere(spherePosition, GroundedRadius, ConveyorLayer, QueryTriggerInteraction.Ignore);
 		}
 
 		private void CameraRotation()
@@ -185,6 +191,7 @@ namespace StarterAssets
 
 			// normalise input direction
 			Vector3 inputDirection = new Vector3(_input.move.x, 0.0f, _input.move.y).normalized;
+			Vector3 conveyDirection = new Vector3(_input.move.x, 0.0f, _input.move.y).normalized;
 
 			// note: Vector2's != operator uses approximation so is not floating point error prone, and is cheaper than magnitude
 			// if there is a move input rotate player when the player is moving
@@ -192,10 +199,15 @@ namespace StarterAssets
 			{
 				// move
 				inputDirection = transform.right * _input.move.x + transform.forward * _input.move.y;
+				conveyDirection = new Vector3(1, 0, 0) * _input.move.x + new Vector3(0, 0, 1) * _input.move.y;
 			}
 
 			// move the player
-			_controller.Move(inputDirection.normalized * (_speed * Time.deltaTime) + new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime);
+			if (!OnConveyor) {
+				_controller.Move(inputDirection.normalized * (_speed * Time.deltaTime) + new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime);
+			} else {
+				_controller.Move(conveyDirection.normalized * (_speed * Time.deltaTime) + new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime);
+			}
 		}
 
 		private void JumpAndGravity()
@@ -263,6 +275,17 @@ namespace StarterAssets
 
 			// when selected, draw a gizmo in the position of, and matching radius of, the grounded collider
 			Gizmos.DrawSphere(new Vector3(transform.position.x, transform.position.y - GroundedOffset, transform.position.z), GroundedRadius);
+		}
+
+		private void Convey() {
+			if (OnConveyor) {
+				GetComponent<StarterAssetsInputs>().autoMove(new Vector2(0, GetComponent<FirstPersonController>().MoveSpeed));
+				preConvey = true;
+			} else if (preConvey) {
+				GetComponent<StarterAssetsInputs>().stopMove();
+				GetComponent<StarterAssetsInputs>().onMove();
+				preConvey = false;
+			}
 		}
 	}
 }
