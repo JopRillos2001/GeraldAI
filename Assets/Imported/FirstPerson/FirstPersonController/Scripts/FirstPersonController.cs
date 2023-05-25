@@ -78,6 +78,9 @@ namespace StarterAssets
 
 		private const float _threshold = 0.01f;
 
+		// toggle bools
+		private bool interactToggleCheck;
+
 		private bool IsCurrentDeviceMouse
 		{
 			get
@@ -119,6 +122,7 @@ namespace StarterAssets
 			JumpAndGravity();
 			GroundedCheck();
 			Move();
+			Interact();
 			Convey();
 		}
 
@@ -256,6 +260,18 @@ namespace StarterAssets
 			{
 				_verticalVelocity += Gravity * Time.deltaTime;
 			}
+		}
+
+		private void Interact() {
+			if (_input.interact && !interactToggleCheck) {
+				interactToggleCheck = true;
+			}
+			if (!_input.interact && interactToggleCheck)
+				interactToggleCheck = false;
+		}
+
+		public bool getInteract() {
+			return interactToggleCheck;
 		}
 
 		private static float ClampAngle(float lfAngle, float lfMin, float lfMax)

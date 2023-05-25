@@ -12,6 +12,7 @@ namespace StarterAssets
 		public Vector2 look;
 		public bool jump;
 		public bool sprint;
+		public bool interact;
 
 		[Header("Movement Settings")]
 		public bool analogMovement;
@@ -24,6 +25,7 @@ namespace StarterAssets
 		private bool canLook = true;
 		private bool canJump = true;
 		private bool canSprint = true;
+		private bool canInteract = true;
 
 #if ENABLE_INPUT_SYSTEM
 		public void OnMove(InputValue value)
@@ -54,6 +56,12 @@ namespace StarterAssets
 				SprintInput(value.isPressed);
 			}
 		}
+
+		public void OnInteract(InputValue value) {
+			if (canInteract) {
+				InteractInput(value.isPressed);
+			}
+		}
 #endif
 
 
@@ -76,7 +84,11 @@ namespace StarterAssets
 		{
 			sprint = newSprintState;
 		}
-		
+
+		public void InteractInput(bool newInteractState) {
+			interact = newInteractState;
+		}
+
 		private void OnApplicationFocus(bool hasFocus)
 		{
 			SetCursorState(cursorLocked);
@@ -92,18 +104,21 @@ namespace StarterAssets
 			look = Vector2.zero;
 			jump = false;
 			sprint = false;
+			interact = false;
 		}
 		public void offMove() {
 			canJump = false;
 			canMove = false;
 			canLook = false;
 			canSprint = false;
+			canInteract = false;
 		}
 		public void onMove() {
 			canJump = true;
 			canMove = true;
 			canLook = true;
 			canSprint = true;
+			canInteract = true;
 		}
 		public void autoMove(Vector2 direction) {
 			move = direction;

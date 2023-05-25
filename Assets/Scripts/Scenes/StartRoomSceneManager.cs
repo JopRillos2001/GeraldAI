@@ -1,11 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class StartRoomSceneManager : MonoBehaviour
 {
     private GameObject player;
     private static StartRoomSceneManager _instance;
+    public TMP_Text countText;
+    public int startCount;
+    private int count;
 
     public static StartRoomSceneManager Instance
     {
@@ -27,7 +31,20 @@ public class StartRoomSceneManager : MonoBehaviour
     private void Start() {
         player = GameObject.FindGameObjectWithTag("Player");
         player.GetComponent<StarterAssets.StarterAssetsInputs>().offMove();
+        count = startCount;
+        updateUI();
+        InvokeRepeating("countDown", 1, 1);
     }
 
+    private void countDown() {
+        if (count > 0) { 
+            count--;
+        }
+        updateUI();
+    }
+
+    public void updateUI() {
+        countText.text = count + "s";
+    }
     
 }
