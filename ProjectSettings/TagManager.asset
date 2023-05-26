@@ -6,6 +6,7 @@ TagManager:
   tags:
   - CinemachineTarget
   - ConveyorBelt
+  - BlockerPanel
   layers:
   - Default
   - TransparentFX
