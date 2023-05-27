@@ -67,6 +67,7 @@ namespace StarterAssets
 		private float _jumpTimeoutDelta;
 		private float _fallTimeoutDelta;
 		private bool preConvey;
+		private bool sufConvey;
 
 	
 #if ENABLE_INPUT_SYSTEM
@@ -79,7 +80,10 @@ namespace StarterAssets
 		private const float _threshold = 0.01f;
 
 		// toggle bools
-		private bool interactToggleCheck;
+		private bool interactToggleCheck; 
+		private bool pauseToggleCheck;
+
+		private GeneralUIManager generalUIManager;
 
 		private bool IsCurrentDeviceMouse
 		{
@@ -108,6 +112,7 @@ namespace StarterAssets
 			_input = GetComponent<StarterAssetsInputs>();
 #if ENABLE_INPUT_SYSTEM
 			_playerInput = GetComponent<PlayerInput>();
+			generalUIManager = FindObjectOfType<GeneralUIManager>();
 #else
 			Debug.LogError( "Starter Assets package is missing dependencies. Please use Tools/Starter Assets/Reinstall Dependencies to fix it");
 #endif
@@ -123,6 +128,7 @@ namespace StarterAssets
 			GroundedCheck();
 			Move();
 			Interact();
+			Pause();
 			Convey();
 		}
 
@@ -144,6 +150,7 @@ namespace StarterAssets
 			// if there is an input
 			if (_input.look.sqrMagnitude >= _threshold)
 			{
+				GameManager.Instance.GetComponent<ProgressManager>().DiscoverMechanic(MechanicEnum.Look);
 				//Don't multiply mouse input by Time.deltaTime
 				float deltaTimeMultiplier = IsCurrentDeviceMouse ? 1.0f : Time.deltaTime;
 				
@@ -201,17 +208,28 @@ namespace StarterAssets
 			// if there is a move input rotate player when the player is moving
 			if (_input.move != Vector2.zero)
 			{
-				// move
+				// move				
 				inputDirection = transform.right * _input.move.x + transform.forward * _input.move.y;
 				conveyDirection = new Vector3(1, 0, 0) * _input.move.x + new Vector3(0, 0, 1) * _input.move.y;
+				if(_input.sprint) GameManager.Instance.GetComponent<ProgressManager>().DiscoverMechanic(MechanicEnum.Sprinting);
 			}
 
 			// move the player
 			if (!OnConveyor) {
+				if (sufConvey) {
+					Invoke("suffixConvey", 1);
+				}
+				if(!sufConvey && _input.move != Vector2.zero)
+				GameManager.Instance.GetComponent<ProgressManager>().DiscoverMechanic(MechanicEnum.Movement);
 				_controller.Move(inputDirection.normalized * (_speed * Time.deltaTime) + new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime);
 			} else {
+				sufConvey = true;
 				_controller.Move(conveyDirection.normalized * (_speed * Time.deltaTime) + new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime);
 			}
+		}
+
+		private void suffixConvey() {
+			sufConvey = false;
 		}
 
 		private void JumpAndGravity()
@@ -231,6 +249,7 @@ namespace StarterAssets
 				if (_input.jump && _jumpTimeoutDelta <= 0.0f)
 				{
 					// the square root of H * -2 * G = how much velocity needed to reach desired height
+					GameManager.Instance.GetComponent<ProgressManager>().DiscoverMechanic(MechanicEnum.Jumping);
 					_verticalVelocity = Mathf.Sqrt(JumpHeight * -2f * Gravity);
 				}
 
@@ -264,10 +283,23 @@ namespace StarterAssets
 
 		private void Interact() {
 			if (_input.interact && !interactToggleCheck) {
+				GameManager.Instance.GetComponent<ProgressManager>().DiscoverMechanic(MechanicEnum.Interact);
 				interactToggleCheck = true;
 			}
 			if (!_input.interact && interactToggleCheck)
 				interactToggleCheck = false;
+		}
+
+		private void Pause() {
+			if (_input.pause && !pauseToggleCheck) {
+				GameManager.Instance.GetComponent<ProgressManager>().DiscoverMechanic(MechanicEnum.Pause);
+				//generalUIManager.updateMechanicsView();
+				generalUIManager.ToggleMenu();
+				pauseToggleCheck = true;
+			}
+			if (!_input.pause && pauseToggleCheck) {
+				pauseToggleCheck = false;
+			}
 		}
 
 		public bool getInteract() {

@@ -13,6 +13,7 @@ namespace StarterAssets
 		public bool jump;
 		public bool sprint;
 		public bool interact;
+		public bool pause;
 
 		[Header("Movement Settings")]
 		public bool analogMovement;
@@ -21,11 +22,13 @@ namespace StarterAssets
 		public bool cursorLocked = true;
 		public bool cursorInputForLook = true;
 
-		private bool canMove = true;
-		private bool canLook = true;
-		private bool canJump = true;
-		private bool canSprint = true;
-		private bool canInteract = true;
+		[Header("Can")]
+		[SerializeField] private bool canMove = true;
+		[SerializeField] private bool canLook = true;
+		[SerializeField] private bool canJump = true;
+		[SerializeField] private bool canSprint = true;
+		[SerializeField] private bool canInteract = true;
+		[SerializeField] private bool canPause = true;
 
 #if ENABLE_INPUT_SYSTEM
 		public void OnMove(InputValue value)
@@ -62,6 +65,12 @@ namespace StarterAssets
 				InteractInput(value.isPressed);
 			}
 		}
+
+		public void OnPause(InputValue value) {
+			if (canPause) {
+				PauseInput(value.isPressed);
+			}
+		}
 #endif
 
 
@@ -89,6 +98,10 @@ namespace StarterAssets
 			interact = newInteractState;
 		}
 
+		public void PauseInput(bool newPauseState) {
+			pause = newPauseState;
+		}
+
 		private void OnApplicationFocus(bool hasFocus)
 		{
 			SetCursorState(cursorLocked);
@@ -113,12 +126,17 @@ namespace StarterAssets
 			canSprint = false;
 			canInteract = false;
 		}
+		public void offMoveTotal() {
+			offMove();
+			canPause = false;
+		}
 		public void onMove() {
 			canJump = true;
 			canMove = true;
 			canLook = true;
 			canSprint = true;
 			canInteract = true;
+			canPause = true;
 		}
 		public void autoMove(Vector2 direction) {
 			move = direction;
