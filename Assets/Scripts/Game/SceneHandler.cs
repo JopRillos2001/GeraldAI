@@ -10,11 +10,8 @@ public class SceneHandler : MonoBehaviour
     private SceneEnum sceneToLoad;
     private Animator blockerAnimator;
 
-    private void Start() {
-        blockerAnimator = GameObject.FindGameObjectWithTag("BlockerPanel").GetComponent<Animator>();
-    }
-
     public void SceneLoad(SceneEnum scene) {
+        blockerAnimator = GameObject.FindGameObjectWithTag("BlockerPanel").GetComponent<Animator>();
         sceneToLoad = scene;
         blockerAnimator.SetBool("Blocked", true);
         Invoke("load", 2);
