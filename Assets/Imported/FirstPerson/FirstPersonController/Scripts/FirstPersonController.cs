@@ -283,7 +283,6 @@ namespace StarterAssets
 
 		private void Interact() {
 			if (_input.interact && !interactToggleCheck) {
-				GameManager.Instance.GetComponent<ProgressManager>().DiscoverMechanic(MechanicEnum.Interact);
 				interactToggleCheck = true;
 			}
 			if (!_input.interact && interactToggleCheck)
@@ -293,7 +292,6 @@ namespace StarterAssets
 		private void Pause() {
 			if (_input.pause && !pauseToggleCheck) {
 				GameManager.Instance.GetComponent<ProgressManager>().DiscoverMechanic(MechanicEnum.Pause);
-				//generalUIManager.updateMechanicsView();
 				generalUIManager.ToggleMenu();
 				pauseToggleCheck = true;
 			}
@@ -302,7 +300,7 @@ namespace StarterAssets
 			}
 		}
 
-		public bool getInteract() {
+        public bool getInteract() {
 			return interactToggleCheck;
 		}
 

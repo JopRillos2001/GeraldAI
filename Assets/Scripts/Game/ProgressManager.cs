@@ -48,9 +48,10 @@ public class ProgressManager : MonoBehaviour
         animator.SetBool("FlyIn", false);
         yield return new WaitForSeconds(1);
         mNotifyQueue.Dequeue();
-        notificationAnimating = false;
         if (mNotifyQueue.Count() > 0) {
             StartCoroutine(notify(mNotifyQueue.First()));
+        } else {
+            notificationAnimating = false;
         }
 
     }

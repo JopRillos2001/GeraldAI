@@ -14,6 +14,8 @@ namespace StarterAssets
 		public bool sprint;
 		public bool interact;
 		public bool pause;
+		public bool pickup;
+		public bool drop;
 
 		[Header("Movement Settings")]
 		public bool analogMovement;
@@ -29,6 +31,8 @@ namespace StarterAssets
 		[SerializeField] private bool canSprint = true;
 		[SerializeField] private bool canInteract = true;
 		[SerializeField] private bool canPause = true;
+		[SerializeField] private bool canPickup = true;
+		[SerializeField] private bool canDrop = true;
 
 #if ENABLE_INPUT_SYSTEM
 		public void OnMove(InputValue value)
@@ -71,6 +75,18 @@ namespace StarterAssets
 				PauseInput(value.isPressed);
 			}
 		}
+
+		public void OnPickup(InputValue value) {
+			if (canPickup) {
+				PickupInput(value.isPressed);
+			}
+		}
+
+		public void OnDrop(InputValue value) {
+			if (canDrop) {
+				DropInput(value.isPressed);
+			}
+		}
 #endif
 
 
@@ -102,6 +118,14 @@ namespace StarterAssets
 			pause = newPauseState;
 		}
 
+		public void PickupInput(bool newPickupState) {
+			pickup = newPickupState;
+		}
+
+		public void DropInput(bool newDropState) {
+			drop = newDropState;
+		}
+
 		private void OnApplicationFocus(bool hasFocus)
 		{
 			SetCursorState(cursorLocked);
@@ -125,6 +149,8 @@ namespace StarterAssets
 			canLook = false;
 			canSprint = false;
 			canInteract = false;
+			canPickup = false;
+			canDrop = false;
 		}
 		public void offMoveTotal() {
 			offMove();
@@ -137,6 +163,8 @@ namespace StarterAssets
 			canSprint = true;
 			canInteract = true;
 			canPause = true;
+			canPickup = true;
+			canDrop = true;
 		}
 		public void autoMove(Vector2 direction) {
 			move = direction;

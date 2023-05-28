@@ -108,4 +108,14 @@ MonoBehaviour:
     mechanicDesc: Press the "E" key to pause the game and open the menu
     discovered: 0
     discoverOrder: 0
+  - mechanic: 4
+    mechanicName: Pickup items
+    mechanicDesc: Use the left mouse button to pick up certain items
+    discovered: 0
+    discoverOrder: 0
+  - mechanic: 5
+    mechanicName: Drop items
+    mechanicDesc: Use the right mouse button to drop what you are holding
+    discovered: 0
+    discoverOrder: 0
   currentScene: 0
