@@ -21,6 +21,7 @@ public class InteractTrigger : MonoBehaviour
     private void OnTriggerStay(Collider other) {
 
         if (other.gameObject == player && player.GetComponent<StarterAssets.FirstPersonController>().getInteract() && !releaseToggle) {
+            GameManager.Instance.GetComponent<ProgressManager>().DiscoverMechanic(MechanicEnum.Interact);
             releaseToggle = true;
             if (openAndClose) {
                 animator.SetBool(parameterName, !animator.GetBool(parameterName));

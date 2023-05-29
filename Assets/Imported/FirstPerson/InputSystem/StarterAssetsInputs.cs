@@ -13,6 +13,9 @@ namespace StarterAssets
 		public bool jump;
 		public bool sprint;
 		public bool interact;
+		public bool pause;
+		public bool pickup;
+		public bool drop;
 
 		[Header("Movement Settings")]
 		public bool analogMovement;
@@ -21,11 +24,15 @@ namespace StarterAssets
 		public bool cursorLocked = true;
 		public bool cursorInputForLook = true;
 
-		private bool canMove = true;
-		private bool canLook = true;
-		private bool canJump = true;
-		private bool canSprint = true;
-		private bool canInteract = true;
+		[Header("Can")]
+		[SerializeField] private bool canMove = true;
+		[SerializeField] private bool canLook = true;
+		[SerializeField] private bool canJump = true;
+		[SerializeField] private bool canSprint = true;
+		[SerializeField] private bool canInteract = true;
+		[SerializeField] private bool canPause = true;
+		[SerializeField] private bool canPickup = true;
+		[SerializeField] private bool canDrop = true;
 
 #if ENABLE_INPUT_SYSTEM
 		public void OnMove(InputValue value)
@@ -62,6 +69,24 @@ namespace StarterAssets
 				InteractInput(value.isPressed);
 			}
 		}
+
+		public void OnPause(InputValue value) {
+			if (canPause) {
+				PauseInput(value.isPressed);
+			}
+		}
+
+		public void OnPickup(InputValue value) {
+			if (canPickup) {
+				PickupInput(value.isPressed);
+			}
+		}
+
+		public void OnDrop(InputValue value) {
+			if (canDrop) {
+				DropInput(value.isPressed);
+			}
+		}
 #endif
 
 
@@ -89,6 +114,18 @@ namespace StarterAssets
 			interact = newInteractState;
 		}
 
+		public void PauseInput(bool newPauseState) {
+			pause = newPauseState;
+		}
+
+		public void PickupInput(bool newPickupState) {
+			pickup = newPickupState;
+		}
+
+		public void DropInput(bool newDropState) {
+			drop = newDropState;
+		}
+
 		private void OnApplicationFocus(bool hasFocus)
 		{
 			SetCursorState(cursorLocked);
@@ -112,6 +149,12 @@ namespace StarterAssets
 			canLook = false;
 			canSprint = false;
 			canInteract = false;
+			canPickup = false;
+			canDrop = false;
+		}
+		public void offMoveTotal() {
+			offMove();
+			canPause = false;
 		}
 		public void onMove() {
 			canJump = true;
@@ -119,6 +162,9 @@ namespace StarterAssets
 			canLook = true;
 			canSprint = true;
 			canInteract = true;
+			canPause = true;
+			canPickup = true;
+			canDrop = true;
 		}
 		public void autoMove(Vector2 direction) {
 			move = direction;

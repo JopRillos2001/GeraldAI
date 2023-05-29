@@ -77,3 +77,45 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2baaa22896997424b89572a687791d97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mechanics:
+  - mechanic: 0
+    mechanicName: Moving
+    mechanicDesc: Use the "WASD" keys to move around
+    discovered: 0
+    discoverOrder: 0
+  - mechanic: 1
+    mechanicName: Jumping
+    mechanicDesc: Press "SPACE" when you're on the ground to jump
+    discovered: 0
+    discoverOrder: 0
+  - mechanic: 2
+    mechanicName: Sprinting
+    mechanicDesc: Hold "SHIFT" while moving to go faster
+    discovered: 0
+    discoverOrder: 0
+  - mechanic: 8
+    mechanicName: Looking
+    mechanicDesc: Use the mouse to look around
+    discovered: 0
+    discoverOrder: 0
+  - mechanic: 3
+    mechanicName: Interacting
+    mechanicDesc: Press the "P" key to interact with objects
+    discovered: 0
+    discoverOrder: 0
+  - mechanic: 7
+    mechanicName: Pausing
+    mechanicDesc: Press the "E" key to pause the game and open the menu
+    discovered: 0
+    discoverOrder: 0
+  - mechanic: 4
+    mechanicName: Pickup items
+    mechanicDesc: Use the left mouse button to pick up certain items
+    discovered: 0
+    discoverOrder: 0
+  - mechanic: 5
+    mechanicName: Drop items
+    mechanicDesc: Use the right mouse button to drop what you are holding
+    discovered: 0
+    discoverOrder: 0
+  currentScene: 0

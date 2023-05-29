@@ -18,6 +18,8 @@ public class SceneHandler : MonoBehaviour
     }
 
     private void load() {
+        StopAllCoroutines();
         SceneManager.LoadScene(scenes.Where(r => r.scene == sceneToLoad).First().sceneId);
+        GameManager.Instance.GetComponent<ProgressManager>().currentScene = sceneToLoad;
     }
 }

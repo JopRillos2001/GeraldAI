@@ -1001,7 +1001,7 @@ GameObject:
   - component: {fileID: 6779351938032815939}
   - component: {fileID: 3589758423588066227}
   m_Layer: 0
-  m_Name: NPC3
+  m_Name: NPC3_Susan
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

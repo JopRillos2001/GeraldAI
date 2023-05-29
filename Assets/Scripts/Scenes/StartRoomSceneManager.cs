@@ -30,21 +30,7 @@ public class StartRoomSceneManager : MonoBehaviour
 
     private void Start() {
         player = GameObject.FindGameObjectWithTag("Player");
-        player.GetComponent<StarterAssets.StarterAssetsInputs>().offMove();
-        count = startCount;
-        updateUI();
-        InvokeRepeating("countDown", 1, 1);
-    }
-
-    private void countDown() {
-        if (count > 0) { 
-            count--;
-        }
-        updateUI();
-    }
-
-    public void updateUI() {
-        countText.text = count + "s";
+        player.GetComponent<StarterAssets.StarterAssetsInputs>().offMoveTotal();
     }
     
 }
