@@ -7,6 +7,9 @@ TagManager:
   - CinemachineTarget
   - ConveyorBelt
   - BlockerPanel
+  - CollectableTrigger
+  - Collectable
+  - SceneManager
   layers:
   - Default
   - TransparentFX
