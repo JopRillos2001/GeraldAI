@@ -2690,22 +2690,22 @@ PrefabInstance:
     - target: {fileID: 5949759676726401349, guid: 4a8d97101b883ee40954c7618e546584,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5949759676726401349, guid: 4a8d97101b883ee40954c7618e546584,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5949759676726401349, guid: 4a8d97101b883ee40954c7618e546584,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 230.4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5949759676726401349, guid: 4a8d97101b883ee40954c7618e546584,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -97.89
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8580197035893285634, guid: 4a8d97101b883ee40954c7618e546584,
         type: 3}
@@ -3008,7 +3008,7 @@ MonoBehaviour:
   animator: {fileID: 792072425242058204}
   parameterName: Talking
   desiredState: 0
-  secondsUntilEvent: 54.5
+  secondsUntilEvent: 26.5
 --- !u!114 &1476457032
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3024,7 +3024,7 @@ MonoBehaviour:
   animator: {fileID: 792072425242058204}
   parameterName: Talking
   desiredState: 1
-  secondsUntilEvent: 7.5
+  secondsUntilEvent: 6.8
 --- !u!1 &1531752563
 GameObject:
   m_ObjectHideFlags: 0
@@ -3763,7 +3763,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 23db81c74b3080b4f8991b8247e452ac, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -4741,7 +4741,7 @@ PrefabInstance:
     - target: {fileID: 1476457030, guid: c83c401b4eef8a84b912d38527c240f7, type: 3}
       propertyPath: clips.Array.data[0].clip
       value: 
-      objectReference: {fileID: 8300000, guid: 63e54210e3a24ea4eba52b10bf64315c, type: 3}
+      objectReference: {fileID: 8300000, guid: b7d331c3c50212348ab162806f6010c0, type: 3}
     - target: {fileID: 1476457030, guid: c83c401b4eef8a84b912d38527c240f7, type: 3}
       propertyPath: clips.Array.data[0].name
       value: TestAnnouncer
@@ -5056,16 +5056,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Gerald
-      objectReference: {fileID: 0}
-    - target: {fileID: 1171615658223439713, guid: 6deb473ee87ef6e4686c0d4ddc400e0c,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.29999924
-      objectReference: {fileID: 0}
-    - target: {fileID: 2359359338208929778, guid: 6deb473ee87ef6e4686c0d4ddc400e0c,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.29999924
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6deb473ee87ef6e4686c0d4ddc400e0c, type: 3}
