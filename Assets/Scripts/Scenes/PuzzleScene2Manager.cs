@@ -7,6 +7,8 @@ public class PuzzleScene2Manager : MonoBehaviour
     private GameObject player;
     private static PuzzleScene2Manager _instance;
 
+
+
     public static PuzzleScene2Manager Instance {
         get { return _instance; }
     }
@@ -23,4 +25,6 @@ public class PuzzleScene2Manager : MonoBehaviour
 
         player = GameObject.FindGameObjectWithTag("Player");
     }
+
+    
 }
