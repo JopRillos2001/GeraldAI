@@ -6,16 +6,15 @@ using UnityEngine;
 public class AnnounceTrigger : MonoBehaviour
 {
     [SerializeField] private List<SoundClip> clips;
-    private AudioClip clipToPlay;
 
     private void Start() {
         foreach (SoundClip clip in clips) {
-            clipToPlay = clip.clip;
-            Invoke("PlayClip", clip.delay);
+            StartCoroutine(PlayClip(clip.clip, clip.delay));
         }
     }
 
-    private void PlayClip() {
-        GetComponent<AudioSource>().PlayOneShot(clipToPlay);
+    private IEnumerator PlayClip(AudioClip clip, float delay) {
+        yield return new WaitForSeconds(delay);
+        GetComponent<AudioSource>().PlayOneShot(clip);
     }
 }

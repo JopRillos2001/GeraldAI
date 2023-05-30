@@ -12,5 +12,6 @@ public enum MechanicEnum
     DropItems,
     RechargeBattery,
     Pause,
-    Look
+    Look,
+    Push
 }

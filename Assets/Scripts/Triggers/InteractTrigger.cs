@@ -11,6 +11,9 @@ public class InteractTrigger : MonoBehaviour
     [SerializeField] private bool openAndClose;
     private GameObject player;
     private bool releaseToggle;
+    [SerializeField] private bool playSound;
+    [SerializeField] private AudioClip clipTrue;
+    [SerializeField] private AudioClip clipFalse;
 
     private void Start() {
         if (animator == null)
@@ -26,8 +29,15 @@ public class InteractTrigger : MonoBehaviour
             if (openAndClose) {
                 animator.SetBool(parameterName, !animator.GetBool(parameterName));
             } else {
-                if (animator.GetBool(parameterName) != desiredState)
-                    animator.SetBool(parameterName, desiredState);
+                if (animator.GetBool(parameterName) != desiredState) {
+                    animator.SetBool(parameterName, desiredState);                    
+                }
+            }
+            if (!playSound) return;
+            if (animator.GetBool(parameterName) == true && clipTrue != null) {
+                GetComponent<AudioSource>().PlayOneShot(clipTrue);
+            } else if (animator.GetBool(parameterName) == false && clipFalse != null) {
+                GetComponent<AudioSource>().PlayOneShot(clipFalse);
             }
         }
         if (!player.GetComponent<StarterAssets.FirstPersonController>().getInteract()) {
