@@ -118,4 +118,9 @@ MonoBehaviour:
     mechanicDesc: Use the right mouse button to drop what you are holding
     discovered: 0
     discoverOrder: 0
-  currentScene: 0
+  - mechanic: 9
+    mechanicName: Pushing
+    mechanicDesc: You can push certain objects by walking into them
+    discovered: 0
+    discoverOrder: 0
+  currentScene: 2

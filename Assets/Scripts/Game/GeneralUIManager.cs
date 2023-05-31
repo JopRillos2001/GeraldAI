@@ -69,5 +69,13 @@ public class GeneralUIManager : MonoBehaviour
         } else {
             Debug.LogError("Component 'SceneButton', which is required for this function, is missing");
         }      
-    }    
+    }
+
+    public void ClickRestartButton() {
+        GameManager.Instance.GetComponent<SceneHandler>().SceneLoad(GameManager.Instance.GetComponent<SceneHandler>().getCurrentScene());
+    }
+
+    public void ClickContinueButton() {
+        ToggleMenu();
+    }
 }

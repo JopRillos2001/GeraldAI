@@ -2551,22 +2551,22 @@ PrefabInstance:
     - target: {fileID: 5949759676726401349, guid: 4a8d97101b883ee40954c7618e546584,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5949759676726401349, guid: 4a8d97101b883ee40954c7618e546584,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5949759676726401349, guid: 4a8d97101b883ee40954c7618e546584,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 230.4
       objectReference: {fileID: 0}
     - target: {fileID: 5949759676726401349, guid: 4a8d97101b883ee40954c7618e546584,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -97.89
       objectReference: {fileID: 0}
     - target: {fileID: 8580197035893285634, guid: 4a8d97101b883ee40954c7618e546584,
         type: 3}
@@ -4754,26 +4754,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 79796610927403466, guid: 91fe6d462823f2941825c7ae237cdba4,
-        type: 3}
-      propertyPath: mechanics.Array.size
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 79796610927403466, guid: 91fe6d462823f2941825c7ae237cdba4,
-        type: 3}
-      propertyPath: mechanics.Array.data[8].mechanic
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 79796610927403466, guid: 91fe6d462823f2941825c7ae237cdba4,
-        type: 3}
-      propertyPath: mechanics.Array.data[8].mechanicDesc
-      value: You can push certain objects by walking into them
-      objectReference: {fileID: 0}
-    - target: {fileID: 79796610927403466, guid: 91fe6d462823f2941825c7ae237cdba4,
-        type: 3}
-      propertyPath: mechanics.Array.data[8].mechanicName
-      value: Pushing
-      objectReference: {fileID: 0}
     - target: {fileID: 1931652317370638924, guid: 91fe6d462823f2941825c7ae237cdba4,
         type: 3}
       propertyPath: m_RootOrder

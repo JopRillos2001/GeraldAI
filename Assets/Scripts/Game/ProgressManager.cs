@@ -7,7 +7,7 @@ using UnityEngine;
 public class ProgressManager : MonoBehaviour
 {
     public List<MechanicClass> mechanics;
-    public SceneEnum currentScene;
+    public SceneEnum currentScene = SceneEnum.StartScene;
     private Animator animator;
     private Queue<MechanicClass> mNotifyQueue = new Queue<MechanicClass>();
     private bool notificationAnimating;

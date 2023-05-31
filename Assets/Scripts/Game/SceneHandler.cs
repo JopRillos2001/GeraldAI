@@ -22,4 +22,9 @@ public class SceneHandler : MonoBehaviour
         SceneManager.LoadScene(scenes.Where(r => r.scene == sceneToLoad).First().sceneId);
         GameManager.Instance.GetComponent<ProgressManager>().currentScene = sceneToLoad;
     }
+
+    public SceneEnum getCurrentScene() {
+        int sceneID = SceneManager.GetActiveScene().buildIndex;
+        return scenes.Where(r => r.sceneId == sceneID).First().scene;
+    }
 }
