@@ -2401,7 +2401,7 @@ MonoBehaviour:
   animator: {fileID: 1280416049}
   parameterName: Talking
   desiredState: 0
-  secondsUntilEvent: 38
+  secondsUntilEvent: 38.5
   playSound: 0
   clipTrue: {fileID: 0}
   clipFalse: {fileID: 0}
@@ -2431,13 +2431,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 738484950}
     m_Modifications:
-    - target: {fileID: 1512736949, guid: 4a8d97101b883ee40954c7618e546584, type: 3}
-      propertyPath: m_AnchoredPosition.x
+    - target: {fileID: 256065449, guid: 4a8d97101b883ee40954c7618e546584, type: 3}
+      propertyPath: m_SizeDelta.x
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1512736949, guid: 4a8d97101b883ee40954c7618e546584, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -0.000030517578
       objectReference: {fileID: 0}
     - target: {fileID: 1757896588, guid: 4a8d97101b883ee40954c7618e546584, type: 3}
       propertyPath: m_SizeDelta.y
@@ -2551,22 +2547,22 @@ PrefabInstance:
     - target: {fileID: 5949759676726401349, guid: 4a8d97101b883ee40954c7618e546584,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5949759676726401349, guid: 4a8d97101b883ee40954c7618e546584,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5949759676726401349, guid: 4a8d97101b883ee40954c7618e546584,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 230.4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5949759676726401349, guid: 4a8d97101b883ee40954c7618e546584,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -97.89
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8580197035893285634, guid: 4a8d97101b883ee40954c7618e546584,
         type: 3}
@@ -4961,7 +4957,7 @@ PrefabInstance:
         type: 3}
       propertyPath: clips.Array.data[0].clip
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8300000, guid: 76b8dfe9e2586754ba4ba159458af318, type: 3}
     - target: {fileID: 3589758423588066227, guid: e00040816583ef74db3fad706e09341e,
         type: 3}
       propertyPath: clips.Array.data[0].name
@@ -4975,7 +4971,7 @@ PrefabInstance:
     - target: {fileID: 6779351938032815939, guid: e00040816583ef74db3fad706e09341e,
         type: 3}
       propertyPath: MaxDistance
-      value: 15
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 6779351938032815939, guid: e00040816583ef74db3fad706e09341e,
         type: 3}
@@ -5347,7 +5343,7 @@ PrefabInstance:
     - target: {fileID: 1615596534644091397, guid: a0de48d6f49f6a24fb0919e916bb27fa,
         type: 3}
       propertyPath: MaxDistance
-      value: 15
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 1615596534644091397, guid: a0de48d6f49f6a24fb0919e916bb27fa,
         type: 3}
@@ -5578,7 +5574,7 @@ PrefabInstance:
         type: 3}
       propertyPath: clips.Array.data[0].clip
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8300000, guid: 3cc445a4f51df8744aad6c0709194300, type: 3}
     - target: {fileID: 7688387614410572782, guid: a0de48d6f49f6a24fb0919e916bb27fa,
         type: 3}
       propertyPath: clips.Array.data[0].name
@@ -5765,7 +5761,7 @@ PrefabInstance:
     - target: {fileID: 7541342585724637909, guid: c9f263dc2c2cf03449496b44d5fe86db,
         type: 3}
       propertyPath: MaxDistance
-      value: 15
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 8821030611821258594, guid: c9f263dc2c2cf03449496b44d5fe86db,
         type: 3}
@@ -5781,7 +5777,7 @@ PrefabInstance:
         type: 3}
       propertyPath: clips.Array.data[0].clip
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8300000, guid: 024d99107e0f23d42b83129e95fd2fa3, type: 3}
     - target: {fileID: 8821030611821258594, guid: c9f263dc2c2cf03449496b44d5fe86db,
         type: 3}
       propertyPath: clips.Array.data[0].name

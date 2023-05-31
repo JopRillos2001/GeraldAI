@@ -8,6 +8,7 @@ public class CollectableTriggerManager : MonoBehaviour
     [SerializeField] private List<ItemTrigger> itemTriggers;
     [SerializeField] private Animator animator;
     [SerializeField] private string attributeName;
+    [SerializeField] private AudioClip audioClip;
     private bool doorOpen;
 
     private void Start()
@@ -29,6 +30,8 @@ public class CollectableTriggerManager : MonoBehaviour
         if (requirementMet && !doorOpen)
         {
             animator.SetBool(attributeName, true);
+            if (audioClip)
+                animator.gameObject.GetComponent<AudioSource>().PlayOneShot(audioClip);
             doorOpen = true;
         }
     }

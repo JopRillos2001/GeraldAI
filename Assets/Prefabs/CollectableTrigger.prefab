@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2039020371277691154}
   - component: {fileID: 6629564102190819795}
   - component: {fileID: 8251179407341926047}
+  - component: {fileID: 725561109279804587}
   - component: {fileID: 824772805209805747}
   - component: {fileID: 8687864421458291178}
   m_Layer: 0
@@ -85,6 +86,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &725561109279804587
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7969312098805375676}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!135 &824772805209805747
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -110,3 +125,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7984cf9f49e22ec439ef41809390fc18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  requirementComplete: 0
+  triggerManager: {fileID: 0}

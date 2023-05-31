@@ -8,6 +8,7 @@ public class SceneTrigger : MonoBehaviour
     [SerializeField] private SceneEnum scene;
     private SceneHandler sceneHandler;
     private GameObject player;
+    private bool triggered;
 
     private void Start() {
         sceneHandler = GameManager.Instance.GetComponent<SceneHandler>();
@@ -16,7 +17,10 @@ public class SceneTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other) {
         if (other.gameObject == player) {
-            sceneHandler.SceneLoad(scene);
+            if (!triggered) {
+                sceneHandler.SceneLoad(scene);
+                triggered = true;
+            }
         }
     }
 }
