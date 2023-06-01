@@ -82,6 +82,8 @@ MonoBehaviour:
   FallTimeout: 0.15
   Grounded: 1
   OnConveyor: 0
+  OnPickupItem: 0
+  LastPickupItem: {fileID: 0}
   GroundedOffset: -0.14
   GroundedRadius: 0.5
   GroundLayers:
@@ -90,6 +92,9 @@ MonoBehaviour:
   ConveyorLayer:
     serializedVersion: 2
     m_Bits: 64
+  PickupLayer:
+    serializedVersion: 2
+    m_Bits: 768
   CinemachineCameraTarget: {fileID: 4937601972214902702}
   TopClamp: 89
   BottomClamp: -89
@@ -447,7 +452,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2359359338208929772}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.375, z: -0.29999924}
+  m_LocalPosition: {x: 0, y: 1.375, z: -0.30000305}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -681,7 +686,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8808982913007370270}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.375, z: -0.29999924}
+  m_LocalPosition: {x: 0, y: 1.375, z: -0.30000305}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

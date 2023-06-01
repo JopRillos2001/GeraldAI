@@ -13,5 +13,7 @@ public enum MechanicEnum
     RechargeBattery,
     Pause,
     Look,
-    Push
+    Push,
+    Throw,
+    ObjectJump
 }
