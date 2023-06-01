@@ -989,6 +989,31 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 391748991}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &403779595 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3426288233484721549, guid: ecc0e830f78c16444be6b2e76170df52,
+    type: 3}
+  m_PrefabInstance: {fileID: 6234160100213751876}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &403779601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 403779595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1c2caa594044134381099a992b60d06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 0}
+  parameterName: isOpen
+  desiredState: 1
+  secondsUntilEvent: 10
+  playSound: 1
+  clipTrue: {fileID: 8300000, guid: 67de501cd3c2aec4dba622bf8fb061a8, type: 3}
+  clipFalse: {fileID: 8300000, guid: 9e6d303f44714d049b7a8ade1ab1d0cb, type: 3}
 --- !u!1 &404204942
 GameObject:
   m_ObjectHideFlags: 0
@@ -2644,31 +2669,6 @@ Transform:
   m_Father: {fileID: 995280249}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1342948007 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6234160099205082698, guid: ecc0e830f78c16444be6b2e76170df52,
-    type: 3}
-  m_PrefabInstance: {fileID: 6234160100213751876}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1342948012
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1342948007}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1c2caa594044134381099a992b60d06, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 0}
-  parameterName: isOpen
-  desiredState: 1
-  secondsUntilEvent: 10
-  playSound: 1
-  clipTrue: {fileID: 8300000, guid: 67de501cd3c2aec4dba622bf8fb061a8, type: 3}
-  clipFalse: {fileID: 8300000, guid: 9e6d303f44714d049b7a8ade1ab1d0cb, type: 3}
 --- !u!1001 &1350145571
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7093,6 +7093,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77b053d2d7b88c54a8a964e6edcca3d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GroundedOffset: 0.5
+  GroundedRadius: 0.5
+  GroundLayers:
+    serializedVersion: 2
+    m_Bits: 1
+  Grounded: 1
 --- !u!54 &6641927273220375166
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7627,7 +7633,7 @@ MonoBehaviour:
       audioDelay: 0
       faceParameterName: Talking
       faceStartDelay: 0
-      faceEndDelay: 2
+      faceEndDelay: 3
 --- !u!1 &8300742102055864271
 GameObject:
   m_ObjectHideFlags: 0

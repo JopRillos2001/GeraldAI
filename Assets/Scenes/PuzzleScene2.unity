@@ -516,6 +516,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 154424366}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!95 &156122239 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3426288233484721554, guid: ecc0e830f78c16444be6b2e76170df52,
+    type: 3}
+  m_PrefabInstance: {fileID: 6234160100213751876}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &159031098
 GameObject:
   m_ObjectHideFlags: 0
@@ -1011,6 +1017,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77b053d2d7b88c54a8a964e6edcca3d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GroundedOffset: 0.5
+  GroundedRadius: 0.5
+  GroundLayers:
+    serializedVersion: 2
+    m_Bits: 1
+  Grounded: 1
 --- !u!54 &350730065
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2353,6 +2365,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77b053d2d7b88c54a8a964e6edcca3d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GroundedOffset: 0.5
+  GroundedRadius: 0.5
+  GroundLayers:
+    serializedVersion: 2
+    m_Bits: 1
+  Grounded: 1
 --- !u!54 &921388094
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3175,7 +3193,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemTriggers: []
-  animator: {fileID: 1955120923}
+  animator: {fileID: 156122239}
   attributeName: isOpen
   audioClip: {fileID: 8300000, guid: 67de501cd3c2aec4dba622bf8fb061a8, type: 3}
 --- !u!1 &1320978462
@@ -3451,6 +3469,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77b053d2d7b88c54a8a964e6edcca3d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GroundedOffset: 0.5
+  GroundedRadius: 0.5
+  GroundLayers:
+    serializedVersion: 2
+    m_Bits: 1
+  Grounded: 1
 --- !u!54 &1394374402
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4423,12 +4447,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1904924282}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!95 &1955120923 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 6234160099205082709, guid: ecc0e830f78c16444be6b2e76170df52,
-    type: 3}
-  m_PrefabInstance: {fileID: 6234160100213751876}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1963424136 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 792072426533430355, guid: 5a32de7dccd5e8c4e97cbdadfb52d7eb,
@@ -5005,7 +5023,8 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1194514961, guid: c83c401b4eef8a84b912d38527c240f7, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c83c401b4eef8a84b912d38527c240f7, type: 3}
 --- !u!1001 &792072425242058203
 PrefabInstance:
@@ -5101,6 +5120,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a32de7dccd5e8c4e97cbdadfb52d7eb, type: 3}
+--- !u!95 &792072425242058204 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8336998526082068664, guid: 5a32de7dccd5e8c4e97cbdadfb52d7eb,
+    type: 3}
+  m_PrefabInstance: {fileID: 792072425242058203}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1112222638894526360
 GameObject:
   m_ObjectHideFlags: 0
@@ -6019,6 +6044,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EndChamber
       objectReference: {fileID: 0}
+    - target: {fileID: 664777894743674620, guid: ecc0e830f78c16444be6b2e76170df52,
+        type: 3}
+      propertyPath: scene
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 5937462699959012753, guid: ecc0e830f78c16444be6b2e76170df52,
         type: 3}
       propertyPath: m_RootOrder
@@ -6594,16 +6624,57 @@ PrefabInstance:
         type: 3}
       propertyPath: clips.Array.data[0].clip
       value: 
-      objectReference: {fileID: 8300000, guid: 63e54210e3a24ea4eba52b10bf64315c, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 8821030611821258594, guid: c9f263dc2c2cf03449496b44d5fe86db,
         type: 3}
       propertyPath: clips.Array.data[0].name
-      value: TestAnnouncer
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8821030611821258594, guid: c9f263dc2c2cf03449496b44d5fe86db,
         type: 3}
       propertyPath: clips.Array.data[0].delay
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9f263dc2c2cf03449496b44d5fe86db, type: 3}
+--- !u!1 &9214603950675889453 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1107302227271843697, guid: c9f263dc2c2cf03449496b44d5fe86db,
+    type: 3}
+  m_PrefabInstance: {fileID: 9214603950675889452}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &9214603950675889454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9214603950675889453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5ac783c9994329419263cd18f5371f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  voiceSpokesman:
+    npcName: Carlo
+    faceAnimator: {fileID: 792072425242058204}
+    voiceLines:
+    - audioName: Greet
+      audioClip: {fileID: 8300000, guid: 94bea6f6c42064b4dbfaf753b93a1862, type: 3}
+      audioDelay: 0
+      faceParameterName: Talking
+      faceStartDelay: 0
+      faceEndDelay: 6.5
+--- !u!135 &9214603950675889455
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9214603950675889453}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 3
+  m_Center: {x: 0, y: 0, z: 0}
