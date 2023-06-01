@@ -65,6 +65,8 @@ MonoBehaviour:
     sceneId: 1
   - scene: 4
     sceneId: 2
+  - scene: 13
+    sceneId: 3
 --- !u!114 &79796610927403466
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -121,6 +123,16 @@ MonoBehaviour:
   - mechanic: 9
     mechanicName: Pushing
     mechanicDesc: You can push certain objects by walking into them
+    discovered: 0
+    discoverOrder: 0
+  - mechanic: 10
+    mechanicName: Throwing
+    mechanicDesc: You can throw picked up object by dropping it with velocity
+    discovered: 0
+    discoverOrder: 0
+  - mechanic: 11
+    mechanicName: Item Jumping
+    mechanicDesc: You can jump off items you just dropped
     discovered: 0
     discoverOrder: 0
   currentScene: 2

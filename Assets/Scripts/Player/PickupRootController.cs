@@ -58,6 +58,10 @@ public class PickupRootController : MonoBehaviour {
                 if (CurrentObject.gameObject.layer == 10) CurrentObject.gameObject.layer = 8;
                 if (CurrentObject.gameObject.layer == 11) CurrentObject.gameObject.layer = 9;
                 CurrentObject.useGravity = true;
+                if (CurrentObject.velocity.magnitude > 10) {
+                    GameManager.Instance.GetComponent<ProgressManager>().DiscoverMechanic(MechanicEnum.Throw);
+                }
+                GameObject.FindGameObjectWithTag("Player").GetComponent<FirstPersonController>().LastPickupItem = CurrentObject.GetComponent<PickupItem>();
                 CurrentObject = null;
                 return;
             }

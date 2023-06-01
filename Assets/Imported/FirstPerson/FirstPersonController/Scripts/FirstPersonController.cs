@@ -38,6 +38,10 @@ namespace StarterAssets
 		public bool Grounded = true;
 		[Tooltip("If the character is on a conveyorbelt or not.")]
 		public bool OnConveyor = false;
+		[Tooltip("If the character is on a pickup item or not.")]
+		public bool OnPickupItem = false;
+		[Tooltip("Whats the last pickup item you stepped on")]
+		public PickupItem LastPickupItem;
 		[Tooltip("Useful for rough ground")]
 		public float GroundedOffset = -0.14f;
 		[Tooltip("The radius of the grounded check. Should match the radius of the CharacterController")]
@@ -45,6 +49,7 @@ namespace StarterAssets
 		[Tooltip("What layers the character uses as ground")]
 		public LayerMask GroundLayers;
 		public LayerMask ConveyorLayer;
+		public LayerMask PickupLayer;
 
 		[Header("Cinemachine")]
 		[Tooltip("The follow target set in the Cinemachine Virtual Camera that the camera will follow")]
@@ -143,6 +148,7 @@ namespace StarterAssets
 			Vector3 spherePosition = new Vector3(transform.position.x, transform.position.y - GroundedOffset, transform.position.z);
 			Grounded = Physics.CheckSphere(spherePosition, GroundedRadius, GroundLayers, QueryTriggerInteraction.Ignore);
 			OnConveyor = Physics.CheckSphere(spherePosition, GroundedRadius, ConveyorLayer, QueryTriggerInteraction.Ignore);
+			OnPickupItem = Physics.CheckSphere(spherePosition, GroundedRadius, PickupLayer, QueryTriggerInteraction.Ignore);
 		}
 
 		private void CameraRotation()
@@ -262,6 +268,11 @@ namespace StarterAssets
 					// the square root of H * -2 * G = how much velocity needed to reach desired height
 					GameManager.Instance.GetComponent<ProgressManager>().DiscoverMechanic(MechanicEnum.Jumping);
 					_verticalVelocity = Mathf.Sqrt(JumpHeight * -2f * Gravity);
+					if (OnPickupItem && LastPickupItem != null) {
+						if (!LastPickupItem.Grounded) {
+							GameManager.Instance.GetComponent<ProgressManager>().DiscoverMechanic(MechanicEnum.ObjectJump);
+						}
+					}
 				}
 
 				// jump timeout
