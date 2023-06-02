@@ -1896,7 +1896,7 @@ SkinnedMeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3707828882051191090}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 3
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
@@ -4291,8 +4291,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pushLayers:
     serializedVersion: 2
-    m_Bits: 0
-  canPush: 0
+    m_Bits: 640
+  canPush: 1
   strength: 1.1
 --- !u!114 &6560007064924561993
 MonoBehaviour:
