@@ -23,7 +23,7 @@ public class InteractTrigger : MonoBehaviour
 
     private void OnTriggerStay(Collider other) {
 
-        if (other.gameObject == player && player.GetComponent<StarterAssets.FirstPersonController>().getInteract() && !releaseToggle) {
+        if (other.gameObject == player && player.GetComponent<StarterAssets.GeraldController>().getInteract() && !releaseToggle) {
             GameManager.Instance.GetComponent<ProgressManager>().DiscoverMechanic(MechanicEnum.Interact);
             releaseToggle = true;
             if (openAndClose) {
@@ -40,7 +40,7 @@ public class InteractTrigger : MonoBehaviour
                 GetComponent<AudioSource>().PlayOneShot(clipFalse);
             }
         }
-        if (!player.GetComponent<StarterAssets.FirstPersonController>().getInteract()) {
+        if (!player.GetComponent<StarterAssets.GeraldController>().getInteract()) {
             releaseToggle = false;
         }
     }

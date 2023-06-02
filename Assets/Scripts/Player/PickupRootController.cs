@@ -61,7 +61,7 @@ public class PickupRootController : MonoBehaviour {
                 if (CurrentObject.velocity.magnitude > 10) {
                     GameManager.Instance.GetComponent<ProgressManager>().DiscoverMechanic(MechanicEnum.Throw);
                 }
-                GameObject.FindGameObjectWithTag("Player").GetComponent<FirstPersonController>().LastPickupItem = CurrentObject.GetComponent<PickupItem>();
+                GameObject.FindGameObjectWithTag("Player").GetComponent<GeraldController>().LastPickupItem = CurrentObject.GetComponent<PickupItem>();
                 CurrentObject = null;
                 return;
             }
