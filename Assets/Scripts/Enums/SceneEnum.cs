@@ -23,5 +23,6 @@ public enum SceneEnum
     Epilogue3Scene,
     Credits,
     Information,
-    Settings
+    Settings,
+    Ad
 }
