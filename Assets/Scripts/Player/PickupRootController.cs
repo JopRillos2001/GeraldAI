@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PickupRootController : MonoBehaviour {
-    private StarterAssetsInputs _input;
+    private GeraldInputs _input;
     [SerializeField] private LayerMask PickupMask;
     private Camera PlayerCamera;
     [SerializeField] private Transform PickupTarget;
@@ -16,7 +16,7 @@ public class PickupRootController : MonoBehaviour {
 
     private void Start() {
         PlayerCamera = Camera.main;
-        _input = GetComponent<StarterAssetsInputs>();
+        _input = GetComponent<GeraldInputs>();
     }
 
     private void Update() {
