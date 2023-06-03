@@ -54,9 +54,9 @@ public class GeneralUIManager : MonoBehaviour
 
     private void showMenu() {
         pausePanel.GetComponent<Animator>().SetBool("Paused", true);
-        player.GetComponent<StarterAssets.StarterAssetsInputs>().cursorInputForLook = false;
-        player.GetComponent<StarterAssets.StarterAssetsInputs>().offMove();
-        player.GetComponent<StarterAssets.StarterAssetsInputs>().stopMoving();
+        player.GetComponent<StarterAssets.GeraldInputs>().cursorInputForLook = false;
+        player.GetComponent<StarterAssets.GeraldInputs>().offMove();
+        player.GetComponent<StarterAssets.GeraldInputs>().stopMoving();
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
     }

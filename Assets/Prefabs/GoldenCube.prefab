@@ -127,7 +127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77b053d2d7b88c54a8a964e6edcca3d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GroundedOffset: -0.14
+  GroundedOffset: 0.5
   GroundedRadius: 0.5
   GroundLayers:
     serializedVersion: 2

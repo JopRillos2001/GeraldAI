@@ -152,6 +152,7 @@ namespace StarterAssets {
             _hasAnimator = TryGetComponent(out _animator);
             _controller = GetComponent<CharacterController>();
             _input = GetComponent<GeraldInputs>();
+            generalUIManager = FindObjectOfType<GeneralUIManager>();
 #if ENABLE_INPUT_SYSTEM 
             _playerInput = GetComponent<PlayerInput>();
 #else
