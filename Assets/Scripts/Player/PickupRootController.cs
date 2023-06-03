@@ -10,7 +10,7 @@ public class PickupRootController : MonoBehaviour {
     [SerializeField] private Transform PickupTarget;
     [Space]
     [SerializeField] private float PickupDistance;
-    private Rigidbody CurrentObject;
+    [SerializeField] private Rigidbody CurrentObject;
     private bool pickupToggleCheck;
     private bool dropToggleCheck;
 
@@ -35,10 +35,13 @@ public class PickupRootController : MonoBehaviour {
 
     private void Pickup() {
         if (_input.pickup && !pickupToggleCheck) {
+            print("Button pressed");
             pickupToggleCheck = true;
             if (CurrentObject) return;
+            print("Object confirmed");
             Ray CameraRay = PlayerCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
             if (Physics.Raycast(CameraRay, out RaycastHit HitInfo, PickupDistance, PickupMask)) {
+                print("Object correct");
                 GameManager.Instance.GetComponent<ProgressManager>().DiscoverMechanic(MechanicEnum.PickUpItems);
                 CurrentObject = HitInfo.rigidbody;
                 if(CurrentObject.gameObject.layer == 8) CurrentObject.gameObject.layer = 10;

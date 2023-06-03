@@ -30,7 +30,7 @@ public class StartRoomSceneManager : MonoBehaviour
 
     private void Start() {
         player = GameObject.FindGameObjectWithTag("Player");
-        player.GetComponent<StarterAssets.StarterAssetsInputs>().offMoveTotal();
+        player.GetComponent<StarterAssets.GeraldInputs>().offMoveTotal();
     }
     
 }

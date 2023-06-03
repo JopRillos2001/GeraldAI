@@ -1,5 +1,5 @@
 using UnityEngine;
-#if ENABLE_INPUT_SYSTEM 
+#if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
 using UnityEngine.InputSystem;
 #endif
 
@@ -8,10 +8,10 @@ using UnityEngine.InputSystem;
 
 namespace StarterAssets {
     [RequireComponent(typeof(CharacterController))]
-#if ENABLE_INPUT_SYSTEM 
+#if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
     [RequireComponent(typeof(PlayerInput))]
 #endif
-    public class GeraldController : MonoBehaviour {
+    public class GeraldControllerBackup : MonoBehaviour {
         [Header("Player")]
         [Tooltip("Move speed of the character in m/s")]
         public float MoveSpeed = 2.0f;
@@ -92,7 +92,6 @@ namespace StarterAssets {
         private float _speed;
         private float _animationBlend;
         private float _targetRotation = 0.0f;
-        private float _cTargetRotation = 0.0f;
         private float _rotationVelocity;
         private float _verticalVelocity;
         private float _terminalVelocity = 53.0f;
@@ -110,7 +109,7 @@ namespace StarterAssets {
         private int _animIDFreeFall;
         private int _animIDMotionSpeed;
 
-#if ENABLE_INPUT_SYSTEM 
+#if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
         private PlayerInput _playerInput;
 #endif
         private Animator _animator;
@@ -130,10 +129,10 @@ namespace StarterAssets {
 
         private bool IsCurrentDeviceMouse {
             get {
-#if ENABLE_INPUT_SYSTEM
+#if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
                 return _playerInput.currentControlScheme == "KeyboardMouse";
 #else
-				return false;
+                return false;
 #endif
             }
         }
@@ -152,11 +151,7 @@ namespace StarterAssets {
             _hasAnimator = TryGetComponent(out _animator);
             _controller = GetComponent<CharacterController>();
             _input = GetComponent<GeraldInputs>();
-#if ENABLE_INPUT_SYSTEM 
-            _playerInput = GetComponent<PlayerInput>();
-#else
-			Debug.LogError( "Starter Assets package is missing dependencies. Please use Tools/Starter Assets/Reinstall Dependencies to fix it");
-#endif
+            generalUIManager = FindObjectOfType<GeneralUIManager>();
 
             AssignAnimationIDs();
 
@@ -204,24 +199,25 @@ namespace StarterAssets {
         }
 
         private void CameraRotation() {
-            // if there is an input
-            if (_input.look.sqrMagnitude >= _threshold) {
+            // if there is an input and camera position is not fixed
+            if (_input.look.sqrMagnitude >= _threshold && !LockCameraPosition) {
+
                 GameManager.Instance.GetComponent<ProgressManager>().DiscoverMechanic(MechanicEnum.Look);
-                //Don't multiply mouse input by Time.deltaTime
+                //Don't multiply mouse input by Time.deltaTime;
                 float deltaTimeMultiplier = IsCurrentDeviceMouse ? 1.0f : Time.deltaTime;
 
-                _cinemachineTargetPitch += _input.look.y * RotationSpeed * deltaTimeMultiplier;
-                _rotationVelocity = _input.look.x * RotationSpeed * deltaTimeMultiplier;
-
-                // clamp our pitch rotation
-                _cinemachineTargetPitch = ClampAngle(_cinemachineTargetPitch, BottomClamp, TopClamp);
-
-                // Update Cinemachine camera target pitch
-                CinemachineCameraTarget.transform.localRotation = Quaternion.Euler(_cinemachineTargetPitch, 0.0f, 0.0f);
-
-                // rotate the player left and right
-                transform.Rotate(Vector3.up * _rotationVelocity);
+                _cinemachineTargetYaw += _input.look.x * deltaTimeMultiplier;
+                _cinemachineTargetPitch += _input.look.y * deltaTimeMultiplier;
             }
+
+            // clamp our rotations so our values are limited 360 degrees
+            _cinemachineTargetYaw = ClampAngle(_cinemachineTargetYaw, float.MinValue, float.MaxValue);
+            _cinemachineTargetPitch = ClampAngle(_cinemachineTargetPitch, BottomClamp, TopClamp);
+
+            // Cinemachine will follow this target
+            CinemachineCameraTarget.transform.rotation = Quaternion.Euler(_cinemachineTargetPitch + CameraAngleOverride,
+                _cinemachineTargetYaw, 0.0f);
+
         }
 
         private void Move() {
@@ -259,20 +255,18 @@ namespace StarterAssets {
 
             // normalise input direction
             Vector3 inputDirection = new Vector3(_input.move.x, 0.0f, _input.move.y).normalized;
-            Vector3 conveyDirection = new Vector3(0, 0.0f, MoveSpeed).normalized;
+            Vector3 conveyDirection = new Vector3(_input.move.x, 0.0f, _input.move.y).normalized;
 
             // note: Vector2's != operator uses approximation so is not floating point error prone, and is cheaper than magnitude
             // if there is a move input rotate player when the player is moving
             if (_input.move != Vector2.zero) {
                 // move
                 inputDirection = transform.right * _input.move.x + transform.forward * _input.move.y;
-                conveyDirection = new Vector3(1, 0, 0) * 0 + new Vector3(0, 0, 1) * MoveSpeed;
+                conveyDirection = new Vector3(1, 0, 0) * _input.move.x + new Vector3(0, 0, 1) * _input.move.y;
                 if (_input.sprint) GameManager.Instance.GetComponent<ProgressManager>().DiscoverMechanic(MechanicEnum.Sprinting);
             }
 
             // move the player
-            _controller.Move(inputDirection.normalized * (_speed * Time.deltaTime) + new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime);
-
             if (!OnConveyor) {
                 if (sufConvey) {
                     Invoke("suffixConvey", 1);
@@ -282,7 +276,7 @@ namespace StarterAssets {
                 _controller.Move(inputDirection.normalized * (_speed * Time.deltaTime) + new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime);
             } else {
                 sufConvey = true;
-                _controller.Move(conveyDirection.normalized * ((MoveSpeed * 2) * Time.deltaTime) + new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime);
+                _controller.Move(conveyDirection.normalized * (_speed * Time.deltaTime) + new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime);
             }
 
             // update animator if using character
@@ -290,6 +284,10 @@ namespace StarterAssets {
                 _animator.SetFloat(_animIDSpeed, _animationBlend);
                 _animator.SetFloat(_animIDMotionSpeed, inputMagnitude);
             }
+        }
+
+        private void suffixConvey() {
+            sufConvey = false;
         }
 
         private void JumpAndGravity() {
@@ -353,40 +351,6 @@ namespace StarterAssets {
             }
         }
 
-        private static float ClampAngle(float lfAngle, float lfMin, float lfMax) {
-            if (lfAngle < -360f) lfAngle += 360f;
-            if (lfAngle > 360f) lfAngle -= 360f;
-            return Mathf.Clamp(lfAngle, lfMin, lfMax);
-        }
-
-        private void OnDrawGizmosSelected() {
-            Color transparentGreen = new Color(0.0f, 1.0f, 0.0f, 0.35f);
-            Color transparentRed = new Color(1.0f, 0.0f, 0.0f, 0.35f);
-
-            if (Grounded) Gizmos.color = transparentGreen;
-            else Gizmos.color = transparentRed;
-
-            // when selected, draw a gizmo in the position of, and matching radius of, the grounded collider
-            Gizmos.DrawSphere(
-                new Vector3(transform.position.x, transform.position.y - GroundedOffset, transform.position.z),
-                GroundedRadius);
-        }
-
-        private void OnFootstep(AnimationEvent animationEvent) {
-            if (animationEvent.animatorClipInfo.weight > 0.5f && !OnConveyor) {
-                if (FootstepAudioClips.Length > 0) {
-                    var index = Random.Range(0, FootstepAudioClips.Length);
-                    AudioSource.PlayClipAtPoint(FootstepAudioClips[index], transform.TransformPoint(_controller.center), FootstepAudioVolume);
-                }
-            }
-        }
-
-        private void OnLand(AnimationEvent animationEvent) {
-            if (animationEvent.animatorClipInfo.weight > 0.5f && !OnConveyor) {
-                AudioSource.PlayClipAtPoint(LandingAudioClip, transform.TransformPoint(_controller.center), FootstepAudioVolume);
-            }
-        }
-
         private void Interact() {
             if (_input.interact && !interactToggleCheck) {
                 interactToggleCheck = true;
@@ -410,21 +374,49 @@ namespace StarterAssets {
             return interactToggleCheck;
         }
 
+        private static float ClampAngle(float lfAngle, float lfMin, float lfMax) {
+            if (lfAngle < -360f) lfAngle += 360f;
+            if (lfAngle > 360f) lfAngle -= 360f;
+            return Mathf.Clamp(lfAngle, lfMin, lfMax);
+        }
 
-        private void Convey() {
-            if (OnConveyor) {
-                GetComponent<GeraldInputs>().stopMoving();
-                GetComponent<GeraldInputs>().offMove();
-                preConvey = true;
-            } else if (preConvey) {
-                GetComponent<GeraldInputs>().stopMove();
-                GetComponent<GeraldInputs>().onMove();
-                preConvey = false;
+        private void OnDrawGizmosSelected() {
+            Color transparentGreen = new Color(0.0f, 1.0f, 0.0f, 0.35f);
+            Color transparentRed = new Color(1.0f, 0.0f, 0.0f, 0.35f);
+
+            if (Grounded) Gizmos.color = transparentGreen;
+            else Gizmos.color = transparentRed;
+
+            // when selected, draw a gizmo in the position of, and matching radius of, the grounded collider
+            Gizmos.DrawSphere(
+                new Vector3(transform.position.x, transform.position.y - GroundedOffset, transform.position.z),
+                GroundedRadius);
+        }
+
+        private void OnFootstep(AnimationEvent animationEvent) {
+            if (animationEvent.animatorClipInfo.weight > 0.5f) {
+                if (FootstepAudioClips.Length > 0) {
+                    var index = Random.Range(0, FootstepAudioClips.Length);
+                    AudioSource.PlayClipAtPoint(FootstepAudioClips[index], transform.TransformPoint(_controller.center), FootstepAudioVolume);
+                }
             }
         }
 
-        private void suffixConvey() {
-            sufConvey = false;
+        private void OnLand(AnimationEvent animationEvent) {
+            if (animationEvent.animatorClipInfo.weight > 0.5f) {
+                AudioSource.PlayClipAtPoint(LandingAudioClip, transform.TransformPoint(_controller.center), FootstepAudioVolume);
+            }
+        }
+
+        private void Convey() {
+            if (OnConveyor) {
+                GetComponent<StarterAssetsInputs>().autoMove(new Vector2(0, GetComponent<GeraldController>().MoveSpeed));
+                preConvey = true;
+            } else if (preConvey) {
+                GetComponent<StarterAssetsInputs>().stopMove();
+                GetComponent<StarterAssetsInputs>().onMove();
+                preConvey = false;
+            }
         }
     }
 }
