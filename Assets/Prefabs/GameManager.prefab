@@ -60,15 +60,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scenes:
   - scene: 2
-    sceneId: 0
-  - scene: 3
     sceneId: 1
-  - scene: 4
+  - scene: 3
     sceneId: 2
-  - scene: 13
+  - scene: 4
     sceneId: 3
-  - scene: 20
+  - scene: 13
     sceneId: 4
+  - scene: 20
+    sceneId: 0
 --- !u!114 &79796610927403466
 MonoBehaviour:
   m_ObjectHideFlags: 0

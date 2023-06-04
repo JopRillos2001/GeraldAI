@@ -6,6 +6,7 @@ public class TimedTrigger : MonoBehaviour
 {
     [SerializeField] private Animator animator;
     [SerializeField] private string parameterName;
+    [SerializeField] private bool isTriggerNotBool;
     [SerializeField] private bool desiredState;
     [SerializeField] private float secondsUntilEvent;
     [SerializeField] private bool playSound;
@@ -19,6 +20,15 @@ public class TimedTrigger : MonoBehaviour
     }
 
     private void ExecuteEvent() {
+        if (isTriggerNotBool) {
+            animator.SetTrigger(parameterName);
+            if (!playSound) return;
+            if (animator.GetBool(parameterName) == true && clipTrue != null) {
+                GetComponent<AudioSource>().PlayOneShot(clipTrue);
+            } else if (animator.GetBool(parameterName) == false && clipFalse != null) {
+                GetComponent<AudioSource>().PlayOneShot(clipFalse);
+            }
+        } else 
         if (animator.GetBool(parameterName) != desiredState) {
             animator.SetBool(parameterName, desiredState);
             if (!playSound) return;
