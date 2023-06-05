@@ -4,19 +4,19 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PickupRootController : MonoBehaviour {
-    private StarterAssetsInputs _input;
+    private GeraldInputs _input;
     [SerializeField] private LayerMask PickupMask;
     private Camera PlayerCamera;
     [SerializeField] private Transform PickupTarget;
     [Space]
     [SerializeField] private float PickupDistance;
-    private Rigidbody CurrentObject;
+    [SerializeField] private Rigidbody CurrentObject;
     private bool pickupToggleCheck;
     private bool dropToggleCheck;
 
     private void Start() {
         PlayerCamera = Camera.main;
-        _input = GetComponent<StarterAssetsInputs>();
+        _input = GetComponent<GeraldInputs>();
     }
 
     private void Update() {
@@ -35,10 +35,13 @@ public class PickupRootController : MonoBehaviour {
 
     private void Pickup() {
         if (_input.pickup && !pickupToggleCheck) {
+            print("Button pressed");
             pickupToggleCheck = true;
             if (CurrentObject) return;
+            print("Object confirmed");
             Ray CameraRay = PlayerCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
             if (Physics.Raycast(CameraRay, out RaycastHit HitInfo, PickupDistance, PickupMask)) {
+                print("Object correct");
                 GameManager.Instance.GetComponent<ProgressManager>().DiscoverMechanic(MechanicEnum.PickUpItems);
                 CurrentObject = HitInfo.rigidbody;
                 if(CurrentObject.gameObject.layer == 8) CurrentObject.gameObject.layer = 10;
@@ -61,7 +64,7 @@ public class PickupRootController : MonoBehaviour {
                 if (CurrentObject.velocity.magnitude > 10) {
                     GameManager.Instance.GetComponent<ProgressManager>().DiscoverMechanic(MechanicEnum.Throw);
                 }
-                GameObject.FindGameObjectWithTag("Player").GetComponent<FirstPersonController>().LastPickupItem = CurrentObject.GetComponent<PickupItem>();
+                GameObject.FindGameObjectWithTag("Player").GetComponent<GeraldController>().LastPickupItem = CurrentObject.GetComponent<PickupItem>();
                 CurrentObject = null;
                 return;
             }

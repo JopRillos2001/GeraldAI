@@ -3,10 +3,8 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 #endif
 
-namespace StarterAssets
-{
-	public class StarterAssetsInputs : MonoBehaviour
-	{
+namespace StarterAssets {
+	public class StarterAssetsInputs : MonoBehaviour {
 		[Header("Character Input Values")]
 		public Vector2 move;
 		public Vector2 look;
@@ -35,30 +33,25 @@ namespace StarterAssets
 		[SerializeField] private bool canDrop = true;
 
 #if ENABLE_INPUT_SYSTEM
-		public void OnMove(InputValue value)
-		{
+		public void OnMove(InputValue value) {
 			if (canMove) {
 				MoveInput(value.Get<Vector2>());
 			}
 		}
 
-		public void OnLook(InputValue value)
-		{
-			if(cursorInputForLook && canLook)
-			{
+		public void OnLook(InputValue value) {
+			if (cursorInputForLook && canLook) {
 				LookInput(value.Get<Vector2>());
 			}
 		}
 
-		public void OnJump(InputValue value)
-		{
+		public void OnJump(InputValue value) {
 			if (canJump) {
 				JumpInput(value.isPressed);
 			}
 		}
 
-		public void OnSprint(InputValue value)
-		{
+		public void OnSprint(InputValue value) {
 			if (canSprint) {
 				SprintInput(value.isPressed);
 			}
@@ -90,23 +83,19 @@ namespace StarterAssets
 #endif
 
 
-		public void MoveInput(Vector2 newMoveDirection)
-		{
+		public void MoveInput(Vector2 newMoveDirection) {
 			move = newMoveDirection;
-		} 
+		}
 
-		public void LookInput(Vector2 newLookDirection)
-		{
+		public void LookInput(Vector2 newLookDirection) {
 			look = newLookDirection;
 		}
 
-		public void JumpInput(bool newJumpState)
-		{
+		public void JumpInput(bool newJumpState) {
 			jump = newJumpState;
 		}
 
-		public void SprintInput(bool newSprintState)
-		{
+		public void SprintInput(bool newSprintState) {
 			sprint = newSprintState;
 		}
 
@@ -126,13 +115,11 @@ namespace StarterAssets
 			drop = newDropState;
 		}
 
-		private void OnApplicationFocus(bool hasFocus)
-		{
+		private void OnApplicationFocus(bool hasFocus) {
 			SetCursorState(cursorLocked);
 		}
 
-		private void SetCursorState(bool newState)
-		{
+		private void SetCursorState(bool newState) {
 			Cursor.lockState = newState ? CursorLockMode.Locked : CursorLockMode.None;
 		}
 
@@ -173,5 +160,5 @@ namespace StarterAssets
 			move = Vector2.zero;
 		}
 	}
-	
+
 }

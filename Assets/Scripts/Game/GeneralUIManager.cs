@@ -46,17 +46,17 @@ public class GeneralUIManager : MonoBehaviour
 
     private void hideMenu() {
         pausePanel.GetComponent<Animator>().SetBool("Paused", false);
-        player.GetComponent<StarterAssets.StarterAssetsInputs>().cursorInputForLook = true;
-        player.GetComponent<StarterAssets.StarterAssetsInputs>().onMove();
+        player.GetComponent<StarterAssets.GeraldInputs>().cursorInputForLook = true;
+        player.GetComponent<StarterAssets.GeraldInputs>().onMove();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
 
     private void showMenu() {
         pausePanel.GetComponent<Animator>().SetBool("Paused", true);
-        player.GetComponent<StarterAssets.StarterAssetsInputs>().cursorInputForLook = false;
-        player.GetComponent<StarterAssets.StarterAssetsInputs>().offMove();
-        player.GetComponent<StarterAssets.StarterAssetsInputs>().stopMoving();
+        player.GetComponent<StarterAssets.GeraldInputs>().cursorInputForLook = false;
+        player.GetComponent<StarterAssets.GeraldInputs>().offMove();
+        player.GetComponent<StarterAssets.GeraldInputs>().stopMoving();
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
     }
