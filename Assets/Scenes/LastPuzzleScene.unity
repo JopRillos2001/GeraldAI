@@ -10421,9 +10421,9 @@ GameObject:
   - component: {fileID: 7477471105787657943}
   - component: {fileID: 7477471105787657945}
   - component: {fileID: 7477471105787657944}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Pink Vase
-  m_TagString: Untagged
+  m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11162,9 +11162,9 @@ GameObject:
   - component: {fileID: 4648374562605790998}
   - component: {fileID: 4648374562605791000}
   - component: {fileID: 4648374562605790999}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Blue Book
-  m_TagString: Untagged
+  m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11385,9 +11385,9 @@ GameObject:
   - component: {fileID: 495166972389574967}
   - component: {fileID: 4607937094559766347}
   - component: {fileID: 4607937094559766346}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Old Keyboard
-  m_TagString: Untagged
+  m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12101,9 +12101,9 @@ GameObject:
   - component: {fileID: 3056335863636742574}
   - component: {fileID: 8453093921458956447}
   - component: {fileID: 8453093921458956446}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Triple Cactus
-  m_TagString: Untagged
+  m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
