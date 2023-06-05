@@ -5,21 +5,12 @@ using UnityEngine;
 
 public class CollectableTriggerManager : MonoBehaviour
 {
-    [SerializeField] private List<ItemTrigger> itemTriggers;
-    [SerializeField] private Animator animator;
-    [SerializeField] private string attributeName;
-    [SerializeField] private AudioClip audioClip;
-    private bool doorOpen;
+    [SerializeField] private List<CollectableCheckClass> collectibleChecks;
 
-    private void Start()
-    {
-        itemTriggers = FindObjectsOfType<ItemTrigger>().ToList();
-    }
-
-    public void CheckItemTriggers()
+    public void CheckItemTriggers(int groupId)
     {
         bool requirementMet = true;
-        foreach (ItemTrigger itemTrigger in itemTriggers)
+        foreach (ItemTrigger itemTrigger in collectibleChecks[groupId].itemTriggers)
         {
             if (!itemTrigger.requirementComplete)
             {
@@ -27,12 +18,12 @@ public class CollectableTriggerManager : MonoBehaviour
             }
         }
 
-        if (requirementMet && !doorOpen)
+        if (requirementMet && !collectibleChecks[groupId].completed)
         {
-            animator.SetBool(attributeName, true);
-            if (audioClip)
-                animator.gameObject.GetComponent<AudioSource>().PlayOneShot(audioClip);
-            doorOpen = true;
+            collectibleChecks[groupId].animator.SetBool(collectibleChecks[groupId].attributeName, true);
+            if (collectibleChecks[groupId].audioClip)
+                collectibleChecks[groupId].animator.gameObject.GetComponent<AudioSource>().PlayOneShot(collectibleChecks[groupId].audioClip);
+            collectibleChecks[groupId].completed = true;
         }
     }
 }
