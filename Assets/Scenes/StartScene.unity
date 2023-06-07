@@ -5832,7 +5832,7 @@ PrefabInstance:
         type: 3}
       propertyPath: clips.Array.data[0].clip
       value: 
-      objectReference: {fileID: 8300000, guid: fa75e7c671af0c146a28bed291420be6, type: 3}
+      objectReference: {fileID: 8300000, guid: bd72a78057bca714e9f41b182b6d5e23, type: 3}
     - target: {fileID: 8821030611821258594, guid: c9f263dc2c2cf03449496b44d5fe86db,
         type: 3}
       propertyPath: clips.Array.data[0].name

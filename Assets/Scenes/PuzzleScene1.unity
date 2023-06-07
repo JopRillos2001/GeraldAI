@@ -1009,6 +1009,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
   parameterName: isOpen
+  isTriggerNotBool: 0
   desiredState: 1
   secondsUntilEvent: 10
   playSound: 1
@@ -1835,6 +1836,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
   parameterName: isOpen
+  isTriggerNotBool: 0
   desiredState: 1
   secondsUntilEvent: 8
   playSound: 1
@@ -4823,6 +4825,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
   parameterName: isOpen
+  isTriggerNotBool: 0
   desiredState: 1
   secondsUntilEvent: 9
   playSound: 1
@@ -6315,6 +6318,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 81677634}
   parameterName: Talking
+  isTriggerNotBool: 0
   desiredState: 0
   secondsUntilEvent: 7.5
   playSound: 0
@@ -6334,6 +6338,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 81677634}
   parameterName: Talking
+  isTriggerNotBool: 0
   desiredState: 1
   secondsUntilEvent: 1.5
   playSound: 0
@@ -7624,7 +7629,7 @@ MonoBehaviour:
     faceAnimator: {fileID: 1555347788}
     voiceLines:
     - audioName: Greet
-      audioClip: {fileID: 8300000, guid: 4f6d09de3f463bf4dbbd056826bcab79, type: 3}
+      audioClip: {fileID: 8300000, guid: b13d9fdcf47414f4c86f2af2723f3ed4, type: 3}
       audioDelay: 0
       faceParameterName: Talking
       faceStartDelay: 0
