@@ -873,17 +873,17 @@ PrefabInstance:
     - target: {fileID: 9106246787774262725, guid: 08cb072512500c3479d2f37b12d4d825,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.6721525
+      value: -9.4
       objectReference: {fileID: 0}
     - target: {fileID: 9106246787774262725, guid: 08cb072512500c3479d2f37b12d4d825,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.6325021
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 9106246787774262725, guid: 08cb072512500c3479d2f37b12d4d825,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -6.332032
+      value: -6
       objectReference: {fileID: 0}
     - target: {fileID: 9106246787774262725, guid: 08cb072512500c3479d2f37b12d4d825,
         type: 3}
@@ -2798,17 +2798,17 @@ PrefabInstance:
     - target: {fileID: 5917195599134219611, guid: 7abc5df1f075a844e93c14e4a85be936,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.577576
+      value: -9.4
       objectReference: {fileID: 0}
     - target: {fileID: 5917195599134219611, guid: 7abc5df1f075a844e93c14e4a85be936,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.9736176
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5917195599134219611, guid: 7abc5df1f075a844e93c14e4a85be936,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.57398915
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5917195599134219611, guid: 7abc5df1f075a844e93c14e4a85be936,
         type: 3}
@@ -5351,6 +5351,7 @@ GameObject:
   - component: {fileID: 2361854209879633586}
   - component: {fileID: 350730065}
   - component: {fileID: 350730064}
+  - component: {fileID: 3714171861824436872}
   m_Layer: 8
   m_Name: Green Plant
   m_TagString: Collectable
@@ -5676,6 +5677,7 @@ GameObject:
   - component: {fileID: 4060512992755453497}
   - component: {fileID: 921388094}
   - component: {fileID: 921388093}
+  - component: {fileID: 4423326773127394167}
   m_Layer: 8
   m_Name: Triple Flower
   m_TagString: Collectable
@@ -5985,7 +5987,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2765821721315644067}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.445663, y: 4.24, z: 0.14732552}
+  m_LocalPosition: {x: -9.4, y: 4.25, z: 0.8}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -6000,6 +6002,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1112222638894526360}
   m_Mesh: {fileID: -9012823556670547968, guid: f150b4c37a4c40047a9633b96429c219, type: 3}
+--- !u!114 &3714171861824436872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1112222638894526360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ad849782ffb6934297b99644a08a653, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minYLevel: -190
 --- !u!64 &4060512992755453497
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6125,6 +6140,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &4423326773127394167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2765821721315644067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ad849782ffb6934297b99644a08a653, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minYLevel: -190
 --- !u!1 &4794452312034987261
 GameObject:
   m_ObjectHideFlags: 0
@@ -6139,6 +6167,7 @@ GameObject:
   - component: {fileID: 2195752257402247753}
   - component: {fileID: 1394374402}
   - component: {fileID: 1394374401}
+  - component: {fileID: 9110038501899508195}
   m_Layer: 8
   m_Name: Blue Flower
   m_TagString: Collectable
@@ -6154,7 +6183,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4794452312034987261}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.619999, y: 1.6, z: -6.28693}
+  m_LocalPosition: {x: -9.396, y: 1.6, z: -6.02}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -6668,6 +6697,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4794452312034987261}
   m_Mesh: {fileID: -2227843925671031058, guid: 049261c380654ce41a3962a1e1c2d0b5, type: 3}
+--- !u!114 &9110038501899508195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4794452312034987261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ad849782ffb6934297b99644a08a653, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minYLevel: -190
 --- !u!1001 &9214603950675889452
 PrefabInstance:
   m_ObjectHideFlags: 0
