@@ -19,7 +19,9 @@ public class WaudioTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other) {
         if (other.gameObject == player) {
-            Invoke("execute", delay);
+            if (!toggled) {
+                Invoke("execute", delay);
+            }
             
         }
     }
@@ -34,8 +36,6 @@ public class WaudioTrigger : MonoBehaviour
     }
 
     private void execute() {
-        if (!toggled) {
-            source.PlayOneShot(clip);
-        }
+        source.PlayOneShot(clip);
     }
 }

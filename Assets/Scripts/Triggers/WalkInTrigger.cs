@@ -24,6 +24,7 @@ public class WalkInTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other) {
         if (other.gameObject == player) {
+            if(!toggled)
             Invoke("execute", delay);
             
         }
@@ -39,24 +40,24 @@ public class WalkInTrigger : MonoBehaviour
     }
 
     private void execute() {
-        if (openAndClose && !toggled) {
-            animator.SetBool(parameterName, !animator.GetBool(parameterName));
-            if (!playSound) return;
-            if (animator.GetBool(parameterName) == true && clipTrue != null) {
-                animator.GetComponent<AudioSource>().PlayOneShot(clipTrue);
-            } else if (animator.GetBool(parameterName) == false && clipFalse != null) {
-                animator.GetComponent<AudioSource>().PlayOneShot(clipFalse);
-            }
-        } else {
-            if (animator.GetBool(parameterName) != desiredState) {
-                animator.SetBool(parameterName, desiredState);
+            if (openAndClose) {
+                animator.SetBool(parameterName, !animator.GetBool(parameterName));
                 if (!playSound) return;
                 if (animator.GetBool(parameterName) == true && clipTrue != null) {
                     animator.GetComponent<AudioSource>().PlayOneShot(clipTrue);
                 } else if (animator.GetBool(parameterName) == false && clipFalse != null) {
                     animator.GetComponent<AudioSource>().PlayOneShot(clipFalse);
                 }
+            } else {
+                if (animator.GetBool(parameterName) != desiredState) {
+                    animator.SetBool(parameterName, desiredState);
+                    if (!playSound) return;
+                    if (animator.GetBool(parameterName) == true && clipTrue != null) {
+                        animator.GetComponent<AudioSource>().PlayOneShot(clipTrue);
+                    } else if (animator.GetBool(parameterName) == false && clipFalse != null) {
+                        animator.GetComponent<AudioSource>().PlayOneShot(clipFalse);
+                    }
+                }
             }
-        }
     }
 }
