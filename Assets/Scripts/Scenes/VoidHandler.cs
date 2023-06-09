@@ -8,11 +8,12 @@ public class VoidHandler : MonoBehaviour
     private bool ripperoni;
 
     private void Start() {
+
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
     private void Update() {
-        if (player.transform.position.y < -200 && !ripperoni) {
+        if (player.transform.position.y < -201 && !ripperoni) {
             ripperoni = true;
             GameManager.Instance.GetComponent<SceneHandler>().SceneLoad(GameManager.Instance.GetComponent<SceneHandler>().getCurrentScene());
         }
