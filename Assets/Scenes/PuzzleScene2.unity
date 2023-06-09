@@ -5351,6 +5351,7 @@ GameObject:
   - component: {fileID: 2361854209879633586}
   - component: {fileID: 350730065}
   - component: {fileID: 350730064}
+  - component: {fileID: 3714171861824436872}
   m_Layer: 8
   m_Name: Green Plant
   m_TagString: Collectable
@@ -5676,6 +5677,7 @@ GameObject:
   - component: {fileID: 4060512992755453497}
   - component: {fileID: 921388094}
   - component: {fileID: 921388093}
+  - component: {fileID: 4423326773127394167}
   m_Layer: 8
   m_Name: Triple Flower
   m_TagString: Collectable
@@ -6000,6 +6002,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1112222638894526360}
   m_Mesh: {fileID: -9012823556670547968, guid: f150b4c37a4c40047a9633b96429c219, type: 3}
+--- !u!114 &3714171861824436872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1112222638894526360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ad849782ffb6934297b99644a08a653, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minYLevel: -190
 --- !u!64 &4060512992755453497
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6125,6 +6140,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &4423326773127394167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2765821721315644067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ad849782ffb6934297b99644a08a653, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minYLevel: -190
 --- !u!1 &4794452312034987261
 GameObject:
   m_ObjectHideFlags: 0
@@ -6139,6 +6167,7 @@ GameObject:
   - component: {fileID: 2195752257402247753}
   - component: {fileID: 1394374402}
   - component: {fileID: 1394374401}
+  - component: {fileID: 9110038501899508195}
   m_Layer: 8
   m_Name: Blue Flower
   m_TagString: Collectable
@@ -6668,6 +6697,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4794452312034987261}
   m_Mesh: {fileID: -2227843925671031058, guid: 049261c380654ce41a3962a1e1c2d0b5, type: 3}
+--- !u!114 &9110038501899508195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4794452312034987261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ad849782ffb6934297b99644a08a653, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minYLevel: -190
 --- !u!1001 &9214603950675889452
 PrefabInstance:
   m_ObjectHideFlags: 0
