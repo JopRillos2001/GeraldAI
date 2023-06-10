@@ -15627,6 +15627,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 2073904696411581035, guid: 91fe6d462823f2941825c7ae237cdba4,
+        type: 3}
+      propertyPath: scenes.Array.size
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2073904696411581035, guid: 91fe6d462823f2941825c7ae237cdba4,
+        type: 3}
+      propertyPath: scenes.Array.data[8].scene
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2073904696411581035, guid: 91fe6d462823f2941825c7ae237cdba4,
+        type: 3}
+      propertyPath: scenes.Array.data[8].sceneId
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91fe6d462823f2941825c7ae237cdba4, type: 3}
 --- !u!1 &832575517
