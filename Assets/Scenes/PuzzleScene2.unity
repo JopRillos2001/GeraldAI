@@ -873,17 +873,17 @@ PrefabInstance:
     - target: {fileID: 9106246787774262725, guid: 08cb072512500c3479d2f37b12d4d825,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.6721525
+      value: -9.4
       objectReference: {fileID: 0}
     - target: {fileID: 9106246787774262725, guid: 08cb072512500c3479d2f37b12d4d825,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.6325021
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 9106246787774262725, guid: 08cb072512500c3479d2f37b12d4d825,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -6.332032
+      value: -6
       objectReference: {fileID: 0}
     - target: {fileID: 9106246787774262725, guid: 08cb072512500c3479d2f37b12d4d825,
         type: 3}
@@ -2798,17 +2798,17 @@ PrefabInstance:
     - target: {fileID: 5917195599134219611, guid: 7abc5df1f075a844e93c14e4a85be936,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.577576
+      value: -9.4
       objectReference: {fileID: 0}
     - target: {fileID: 5917195599134219611, guid: 7abc5df1f075a844e93c14e4a85be936,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.9736176
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5917195599134219611, guid: 7abc5df1f075a844e93c14e4a85be936,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.57398915
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5917195599134219611, guid: 7abc5df1f075a844e93c14e4a85be936,
         type: 3}
@@ -5987,7 +5987,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2765821721315644067}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.445663, y: 4.24, z: 0.14732552}
+  m_LocalPosition: {x: -9.4, y: 4.25, z: 0.8}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -6183,7 +6183,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4794452312034987261}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.619999, y: 1.6, z: -6.28693}
+  m_LocalPosition: {x: -9.396, y: 1.6, z: -6.02}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -6832,7 +6832,7 @@ MonoBehaviour:
     faceAnimator: {fileID: 792072425242058204}
     voiceLines:
     - audioName: Greet
-      audioClip: {fileID: 8300000, guid: 7093677cb64985e4abed84062d5f31f5, type: 3}
+      audioClip: {fileID: 8300000, guid: 60aced5f935ca5046b77262a217b4375, type: 3}
       audioDelay: 0
       faceParameterName: Talking
       faceStartDelay: 0
