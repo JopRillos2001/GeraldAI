@@ -6832,7 +6832,7 @@ MonoBehaviour:
     faceAnimator: {fileID: 792072425242058204}
     voiceLines:
     - audioName: Greet
-      audioClip: {fileID: 8300000, guid: 7093677cb64985e4abed84062d5f31f5, type: 3}
+      audioClip: {fileID: 8300000, guid: 60aced5f935ca5046b77262a217b4375, type: 3}
       audioDelay: 0
       faceParameterName: Talking
       faceStartDelay: 0
