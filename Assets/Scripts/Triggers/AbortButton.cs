@@ -26,6 +26,9 @@ public class AbortButton : MonoBehaviour
     [SerializeField] private Animator door;
     [SerializeField] private float doorDelay;
     [SerializeField] private Animator mayorFace;
+    [SerializeField] private AudioClip doorOpen;
+    [SerializeField] private AudioClip doorClose;
+    private AudioSource doorSource;
 
     private void Start() {
         if (squasherAnimator == null)
@@ -34,6 +37,7 @@ public class AbortButton : MonoBehaviour
         continueTrigger.enabled = true;
         saveTrigger.enabled = false;
         buttonAnimator = GetComponent<Animator>();
+        doorSource = door.GetComponent<AudioSource>();
     }
 
     private void OnTriggerStay(Collider other) {
@@ -75,6 +79,7 @@ public class AbortButton : MonoBehaviour
         alarmPanel.SetBool("Alarm", true);
         continueTrigger.enabled = false;
         saveTrigger.enabled = true;
+        doorSource.PlayOneShot(doorClose);
         door.SetBool("isOpen", false);
         saveAudioSource.PlayOneShot(MayorAfterSaveClip);
         mayorFace.SetBool("Talking", true);
@@ -88,6 +93,7 @@ public class AbortButton : MonoBehaviour
 
     private void openDoor() {
         mayorFace.SetBool("Talking", false);
+        doorSource.PlayOneShot(doorOpen);
         door.SetBool("isOpen", true);
     }
 

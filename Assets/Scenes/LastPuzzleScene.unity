@@ -4370,7 +4370,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: f59bfea083e9a9940a32deaa7e074590, type: 3}
+  m_audioClip: {fileID: 8300000, guid: c7de59b3088ecd141ab9407eafc7327c, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -29087,6 +29087,8 @@ MonoBehaviour:
   door: {fileID: 103129653}
   doorDelay: 42
   mayorFace: {fileID: 792072425242058204}
+  doorOpen: {fileID: 8300000, guid: 67de501cd3c2aec4dba622bf8fb061a8, type: 3}
+  doorClose: {fileID: 8300000, guid: 9e6d303f44714d049b7a8ade1ab1d0cb, type: 3}
 --- !u!82 &1632594048
 AudioSource:
   m_ObjectHideFlags: 0

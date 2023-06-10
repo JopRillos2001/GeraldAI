@@ -29,6 +29,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Credits.unity
     guid: d295e157f1b3a3547b3635d134027e21
+  - enabled: 1
+    path: Assets/Scenes/EpilogueSave.unity
+    guid: 914506dd34b34c44485efa8014d65800
+  - enabled: 1
+    path: Assets/Scenes/EpilogueContinue.unity
+    guid: 4e772b471a7123c4883947cf05941a7d
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 9e7be553448fa2546aea5752021cbcf7,
       type: 2}

@@ -39,19 +39,23 @@ public class ProgressManager : MonoBehaviour
     }
 
     private IEnumerator notify(MechanicClass mechanic) {
-        animator = FindObjectOfType<GeneralUIManager>().transform.GetChild(0).GetChild(2).GetComponent<Animator>();
-        animator.transform.GetChild(0).GetComponent<TMP_Text>().text = "Mechanic Discovered\n" + SpaceString(mechanic.mechanicName.ToString());
-        animator.SetBool("FlyIn", true);
-        yield return new WaitForSeconds(6);
-        animator = FindObjectOfType<GeneralUIManager>().transform.GetChild(0).GetChild(2).GetComponent<Animator>();
-        animator.transform.GetChild(0).GetComponent<TMP_Text>().text = "Mechanic Discovered\n" + SpaceString(mechanic.mechanicName.ToString());
-        animator.SetBool("FlyIn", false);
-        yield return new WaitForSeconds(1);
-        mNotifyQueue.Dequeue();
-        if (mNotifyQueue.Count() > 0) {
-            StartCoroutine(notify(mNotifyQueue.First()));
-        } else {
-            notificationAnimating = false;
+        if (FindObjectOfType<GeneralUIManager>()) {
+            animator = FindObjectOfType<GeneralUIManager>().transform.GetChild(0).GetChild(2).GetComponent<Animator>();
+            animator.transform.GetChild(0).GetComponent<TMP_Text>().text = "Mechanic Discovered\n" + SpaceString(mechanic.mechanicName.ToString());
+            animator.SetBool("FlyIn", true);
+            yield return new WaitForSeconds(6);
+            if (FindObjectOfType<GeneralUIManager>()) {
+                animator = FindObjectOfType<GeneralUIManager>().transform.GetChild(0).GetChild(2).GetComponent<Animator>();
+                animator.transform.GetChild(0).GetComponent<TMP_Text>().text = "Mechanic Discovered\n" + SpaceString(mechanic.mechanicName.ToString());
+                animator.SetBool("FlyIn", false);
+                yield return new WaitForSeconds(1);
+                mNotifyQueue.Dequeue();
+                if (mNotifyQueue.Count() > 0) {
+                    StartCoroutine(notify(mNotifyQueue.First()));
+                } else {
+                    notificationAnimating = false;
+                }
+            }
         }
 
     }
