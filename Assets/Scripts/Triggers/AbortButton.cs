@@ -5,6 +5,7 @@ using UnityEngine;
 public class AbortButton : MonoBehaviour
 {
     [SerializeField] private Animator squasherAnimator;
+    private Animator buttonAnimator;
     [SerializeField] private string parameterName;
     [SerializeField] private bool worksOnce;
     public bool disabled;
@@ -20,6 +21,11 @@ public class AbortButton : MonoBehaviour
     [SerializeField] private Animator alarmPanel;
     [SerializeField] private BoxCollider continueTrigger;
     [SerializeField] private BoxCollider saveTrigger;
+    [SerializeField] private AudioSource saveAudioSource;
+    [SerializeField] private AudioClip MayorAfterSaveClip;
+    [SerializeField] private Animator door;
+    [SerializeField] private float doorDelay;
+    [SerializeField] private Animator mayorFace;
 
     private void Start() {
         if (squasherAnimator == null)
@@ -27,6 +33,7 @@ public class AbortButton : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         continueTrigger.enabled = true;
         saveTrigger.enabled = false;
+        buttonAnimator = GetComponent<Animator>();
     }
 
     private void OnTriggerStay(Collider other) {
@@ -37,6 +44,7 @@ public class AbortButton : MonoBehaviour
                 if (worksOnce) {
                     toggled = true;
                 }
+                pressButton();
                 stopSquasher();
             }
             if (!playSound) return;
@@ -55,6 +63,11 @@ public class AbortButton : MonoBehaviour
         }
     }
 
+    private void pressButton() {
+        buttonAnimator.SetBool("Pressed", true);
+        GetComponent<AudioSource>().PlayOneShot(clipTrue);
+    }
+
     private void stopSquasher() {
         squasherAnimator.SetBool(parameterName, false);
         escapeBlocker.SetActive(true);
@@ -62,11 +75,20 @@ public class AbortButton : MonoBehaviour
         alarmPanel.SetBool("Alarm", true);
         continueTrigger.enabled = false;
         saveTrigger.enabled = true;
+        door.SetBool("isOpen", false);
+        saveAudioSource.PlayOneShot(MayorAfterSaveClip);
+        mayorFace.SetBool("Talking", true);
         Invoke("disableAlarmPanel", 10);
+        Invoke("openDoor", doorDelay);
     }
 
     private void disableAlarmPanel() {
         alarmPanel.SetBool("Alarm", false);
+    }
+
+    private void openDoor() {
+        mayorFace.SetBool("Talking", false);
+        door.SetBool("isOpen", true);
     }
 
 }
