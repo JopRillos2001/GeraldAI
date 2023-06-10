@@ -6,5 +6,6 @@ using UnityEngine;
 public class VirCamStamp
 {
     public GameObject virCam;
-    public float delay; 
+    public float delay;
+    public bool fadedTransition;
 }

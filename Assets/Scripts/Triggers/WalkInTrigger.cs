@@ -6,9 +6,12 @@ public class WalkInTrigger : MonoBehaviour
 {
     [SerializeField] private Animator animator;
     [SerializeField] private string parameterName;
+    [SerializeField] private float delay;
     [SerializeField] private bool desiredState;
     [SerializeField] private bool openAndClose;
+    [SerializeField] private bool worksOnce;
     private GameObject player;
+    private bool toggled;
     [SerializeField] private bool playSound;
     [SerializeField] private AudioClip clipTrue;
     [SerializeField] private AudioClip clipFalse;
@@ -20,8 +23,23 @@ public class WalkInTrigger : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other) {
-
         if (other.gameObject == player) {
+            if(!toggled)
+            Invoke("execute", delay);
+            
+        }
+    }
+
+    private void OnTriggerExit(Collider other) {
+        if (other.gameObject == player) {
+            if (worksOnce) { 
+                toggled = true;
+            }
+
+        }
+    }
+
+    private void execute() {
             if (openAndClose) {
                 animator.SetBool(parameterName, !animator.GetBool(parameterName));
                 if (!playSound) return;
@@ -41,7 +59,5 @@ public class WalkInTrigger : MonoBehaviour
                     }
                 }
             }
-            
-        }
     }
 }
