@@ -59,28 +59,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scenes:
+  - scene: 1
+    sceneId: 0
+  - scene: 20
+    sceneId: 1
   - scene: 2
     sceneId: 2
   - scene: 3
     sceneId: 3
   - scene: 4
     sceneId: 4
-  - scene: 13
-    sceneId: 6
-  - scene: 20
-    sceneId: 1
-  - scene: 1
-    sceneId: 0
-  - scene: 14
-    sceneId: 7
-  - scene: 17
-    sceneId: 8
   - scene: 6
     sceneId: 5
-  - scene: 15
+  - scene: 7
+    sceneId: 6
+  - scene: 13
+    sceneId: 7
+  - scene: 14
+    sceneId: 8
+  - scene: 17
     sceneId: 9
-  - scene: 16
+  - scene: 15
     sceneId: 10
+  - scene: 16
+    sceneId: 11
 --- !u!114 &79796610927403466
 MonoBehaviour:
   m_ObjectHideFlags: 0
