@@ -21,6 +21,9 @@ public class AdSceneHandler : MonoBehaviour
         foreach (VirCamStamp vcs in virCamsStamps) {
             StartCoroutine(SwitchCam(vcs.virCam, vcs.delay));
         }
+
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     private IEnumerator SwitchCam(GameObject virCam, float delay) {

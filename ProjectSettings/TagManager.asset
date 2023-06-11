@@ -23,8 +23,8 @@ TagManager:
   - Pushandpickupable
   - PickupableIgnore
   - PushandpickupableIgnore
-  - 
-  - 
+  - Town
+  - ItemBox
   - 
   - 
   - 

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,10 +18,21 @@ public class SceneHandler : MonoBehaviour
         Invoke("load", 2);
     }
 
+    public void QuitGame() {
+        blockerAnimator = GameObject.FindGameObjectWithTag("BlockerPanel").GetComponent<Animator>();
+        blockerAnimator.SetBool("Blocked", true);
+        Invoke("quit", 2);
+    }
+
     private void load() {
         StopAllCoroutines();
         SceneManager.LoadScene(scenes.Where(r => r.scene == sceneToLoad).First().sceneId);
         GameManager.Instance.GetComponent<ProgressManager>().currentScene = sceneToLoad;
+    }
+
+    private void quit() {
+        StopAllCoroutines();
+        Application.Quit();
     }
 
     public SceneEnum getCurrentScene() {
