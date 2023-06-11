@@ -2950,7 +2950,7 @@ MonoBehaviour:
     faceAnimator: {fileID: 1579028445}
     voiceLines:
     - audioName: Instruct
-      audioClip: {fileID: 8300000, guid: fbb7faceec7f6a040af055581ed817ec, type: 3}
+      audioClip: {fileID: 8300000, guid: ec847a982fe2ac545a0e6a6d52fe2c9b, type: 3}
       audioDelay: 0
       faceParameterName: Talking
       faceStartDelay: 0

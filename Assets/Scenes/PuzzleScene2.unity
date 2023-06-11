@@ -5342,6 +5342,12 @@ Animator:
     type: 3}
   m_PrefabInstance: {fileID: 792072425242058203}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &792072425242058205 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1621939745694229343, guid: 5a32de7dccd5e8c4e97cbdadfb52d7eb,
+    type: 3}
+  m_PrefabInstance: {fileID: 792072425242058203}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1112222638894526360
 GameObject:
   m_ObjectHideFlags: 0
@@ -6690,6 +6696,47 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 7688387614410572782, guid: a0de48d6f49f6a24fb0919e916bb27fa, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a0de48d6f49f6a24fb0919e916bb27fa, type: 3}
+--- !u!1 &7987515626400454772 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7987515625431589488, guid: a0de48d6f49f6a24fb0919e916bb27fa,
+    type: 3}
+  m_PrefabInstance: {fileID: 7987515626400454771}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7987515626400454773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7987515626400454772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5ac783c9994329419263cd18f5371f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  voiceSpokesman:
+    npcName: Peter
+    faceAnimator: {fileID: 792072425242058205}
+    voiceLines:
+    - audioName: Warn
+      audioClip: {fileID: 8300000, guid: a38422cdf3febe641a7f75c107141ecb, type: 3}
+      audioDelay: 0
+      faceParameterName: Talking
+      faceStartDelay: 0
+      faceEndDelay: 2.5
+--- !u!135 &7987515626400454774
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7987515626400454772}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 3
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &8123707553650368807 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1107302227272166411, guid: c9f263dc2c2cf03449496b44d5fe86db,
