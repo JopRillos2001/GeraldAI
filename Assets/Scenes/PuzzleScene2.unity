@@ -6891,7 +6891,7 @@ MonoBehaviour:
       audioDelay: 0
       faceParameterName: Talking
       faceStartDelay: 0
-      faceEndDelay: 6
+      faceEndDelay: 5.4
 --- !u!135 &9214603950675889455
 SphereCollider:
   m_ObjectHideFlags: 0
