@@ -78,9 +78,9 @@ MonoBehaviour:
   - scene: 6
     sceneId: 5
   - scene: 15
-    sceneId: 8
-  - scene: 16
     sceneId: 9
+  - scene: 16
+    sceneId: 10
 --- !u!114 &79796610927403466
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,3 +150,4 @@ MonoBehaviour:
     discovered: 0
     discoverOrder: 0
   currentScene: 2
+  previousScene: 0
