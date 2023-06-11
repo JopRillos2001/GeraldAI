@@ -4871,11 +4871,11 @@ MonoBehaviour:
     faceAnimator: {fileID: 792072425242058205}
     voiceLines:
     - audioName: Hint
-      audioClip: {fileID: 8300000, guid: 60aced5f935ca5046b77262a217b4375, type: 3}
+      audioClip: {fileID: 8300000, guid: 3bc9bd7d38e57aa4cb3cbce56e896d7d, type: 3}
       audioDelay: 0
       faceParameterName: Talking
       faceStartDelay: 0
-      faceEndDelay: 6
+      faceEndDelay: 4
 --- !u!135 &1147986016
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -5389,22 +5389,22 @@ PrefabInstance:
     - target: {fileID: 5949759676726401349, guid: 4a8d97101b883ee40954c7618e546584,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5949759676726401349, guid: 4a8d97101b883ee40954c7618e546584,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5949759676726401349, guid: 4a8d97101b883ee40954c7618e546584,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 230.4
       objectReference: {fileID: 0}
     - target: {fileID: 5949759676726401349, guid: 4a8d97101b883ee40954c7618e546584,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -97.89
       objectReference: {fileID: 0}
     - target: {fileID: 8580197035893285634, guid: 4a8d97101b883ee40954c7618e546584,
         type: 3}
