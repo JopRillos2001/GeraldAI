@@ -14,6 +14,7 @@ public class ProgressManager : MonoBehaviour
     private bool notificationAnimating;
 
     private void Start() {
+        currentScene = GetComponent<SceneHandler>().getCurrentScene();
     }
 
     public void DiscoverMechanic(MechanicEnum mechanic) {
