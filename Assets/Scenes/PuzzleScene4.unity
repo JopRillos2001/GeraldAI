@@ -6215,7 +6215,7 @@ MonoBehaviour:
   parameterName: Talking
   isTriggerNotBool: 0
   desiredState: 0
-  secondsUntilEvent: 10
+  secondsUntilEvent: 11
   playSound: 0
   clipTrue: {fileID: 0}
   clipFalse: {fileID: 0}
@@ -8662,7 +8662,7 @@ PrefabInstance:
     - target: {fileID: 1476457030, guid: c83c401b4eef8a84b912d38527c240f7, type: 3}
       propertyPath: clips.Array.data[0].clip
       value: 
-      objectReference: {fileID: 8300000, guid: 626786ab29693b54ab239c8c24a285bd, type: 3}
+      objectReference: {fileID: 8300000, guid: 9fcf2d0c7b497d048af346667a776abf, type: 3}
     - target: {fileID: 1476457030, guid: c83c401b4eef8a84b912d38527c240f7, type: 3}
       propertyPath: clips.Array.data[0].name
       value: Introduction

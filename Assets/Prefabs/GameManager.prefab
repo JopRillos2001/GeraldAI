@@ -75,13 +75,13 @@ MonoBehaviour:
     sceneId: 6
   - scene: 13
     sceneId: 7
-  - scene: 14
-    sceneId: 8
-  - scene: 17
-    sceneId: 9
   - scene: 15
-    sceneId: 10
+    sceneId: 8
   - scene: 16
+    sceneId: 9
+  - scene: 14
+    sceneId: 10
+  - scene: 17
     sceneId: 11
 --- !u!114 &79796610927403466
 MonoBehaviour:

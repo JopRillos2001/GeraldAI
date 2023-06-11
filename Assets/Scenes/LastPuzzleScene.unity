@@ -14916,22 +14916,22 @@ PrefabInstance:
     - target: {fileID: 5949759676726401349, guid: 4a8d97101b883ee40954c7618e546584,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5949759676726401349, guid: 4a8d97101b883ee40954c7618e546584,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5949759676726401349, guid: 4a8d97101b883ee40954c7618e546584,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 230.4
       objectReference: {fileID: 0}
     - target: {fileID: 5949759676726401349, guid: 4a8d97101b883ee40954c7618e546584,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -97.89
       objectReference: {fileID: 0}
     - target: {fileID: 8580197035893285634, guid: 4a8d97101b883ee40954c7618e546584,
         type: 3}
@@ -15885,21 +15885,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GameManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 2073904696411581035, guid: 91fe6d462823f2941825c7ae237cdba4,
-        type: 3}
-      propertyPath: scenes.Array.size
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 2073904696411581035, guid: 91fe6d462823f2941825c7ae237cdba4,
-        type: 3}
-      propertyPath: scenes.Array.data[8].scene
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 2073904696411581035, guid: 91fe6d462823f2941825c7ae237cdba4,
-        type: 3}
-      propertyPath: scenes.Array.data[8].sceneId
-      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91fe6d462823f2941825c7ae237cdba4, type: 3}
@@ -23928,7 +23913,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: f59bfea083e9a9940a32deaa7e074590, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 3b10ff4922c60044ebdd0b79f3a068eb, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
