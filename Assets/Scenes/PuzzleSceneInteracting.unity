@@ -5571,11 +5571,11 @@ MonoBehaviour:
     faceAnimator: {fileID: 1579028445}
     voiceLines:
     - audioName: Instruct
-      audioClip: {fileID: 8300000, guid: ec847a982fe2ac545a0e6a6d52fe2c9b, type: 3}
+      audioClip: {fileID: 8300000, guid: 2491e4580c609b749b5aa044aee62d4d, type: 3}
       audioDelay: 0
       faceParameterName: Talking
-      faceStartDelay: 0
-      faceEndDelay: 4
+      faceStartDelay: 0.5
+      faceEndDelay: 6
 --- !u!135 &1481163702
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -10647,7 +10647,7 @@ PrefabInstance:
     - target: {fileID: 664777894743674620, guid: ecc0e830f78c16444be6b2e76170df52,
         type: 3}
       propertyPath: scene
-      value: 4
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5937462699959012753, guid: ecc0e830f78c16444be6b2e76170df52,
         type: 3}

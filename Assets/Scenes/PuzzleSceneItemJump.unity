@@ -3246,22 +3246,22 @@ PrefabInstance:
     - target: {fileID: 5949759676726401349, guid: 4a8d97101b883ee40954c7618e546584,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5949759676726401349, guid: 4a8d97101b883ee40954c7618e546584,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5949759676726401349, guid: 4a8d97101b883ee40954c7618e546584,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 230.4
       objectReference: {fileID: 0}
     - target: {fileID: 5949759676726401349, guid: 4a8d97101b883ee40954c7618e546584,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -97.89
       objectReference: {fileID: 0}
     - target: {fileID: 7668618366273345527, guid: 4a8d97101b883ee40954c7618e546584,
         type: 3}
@@ -4956,7 +4956,7 @@ MonoBehaviour:
   parameterName: Talking
   isTriggerNotBool: 0
   desiredState: 0
-  secondsUntilEvent: 7.5
+  secondsUntilEvent: 11
   playSound: 0
   clipTrue: {fileID: 0}
   clipFalse: {fileID: 0}
@@ -4996,13 +4996,13 @@ PrefabInstance:
     - target: {fileID: 8292598157590882458, guid: ba6ed41f3d0c13241870e2b12faac7b6,
         type: 3}
       propertyPath: clips.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8292598157590882458, guid: ba6ed41f3d0c13241870e2b12faac7b6,
         type: 3}
       propertyPath: clips.Array.data[0].clip
       value: 
-      objectReference: {fileID: 8300000, guid: d407e7cb820dce143a133bd21f2a25cf, type: 3}
+      objectReference: {fileID: 8300000, guid: 2acdb64dc13d0734c82c4a5be857546d, type: 3}
     - target: {fileID: 8292598157590882458, guid: ba6ed41f3d0c13241870e2b12faac7b6,
         type: 3}
       propertyPath: clips.Array.data[0].name
@@ -5110,7 +5110,7 @@ PrefabInstance:
     - target: {fileID: 664777894743674620, guid: ecc0e830f78c16444be6b2e76170df52,
         type: 3}
       propertyPath: scene
-      value: 4
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 5937462699959012753, guid: ecc0e830f78c16444be6b2e76170df52,
         type: 3}

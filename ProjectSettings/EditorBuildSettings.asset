@@ -18,14 +18,23 @@ EditorBuildSettings:
     path: Assets/Scenes/PuzzleSceneJump.unity
     guid: 2c9aa9e62b25ec848a965ee65d204974
   - enabled: 1
-    path: Assets/Scenes/PuzzleSceneSprinting.unity
-    guid: 75f5f19e5e7de2b4ca1582aa42df98c1
+    path: Assets/Scenes/PuzzleSceneCleanUp.unity
+    guid: 40e2dbba98fb0704c984f32f95e564b6
+  - enabled: 1
+    path: Assets/Scenes/PuzzleScenePickAndDrop.unity
+    guid: d75e409c9eb6cdc479299d0554580156
+  - enabled: 1
+    path: Assets/Scenes/PuzzleSceneInteracting.unity
+    guid: 4942896fbc4ab074295cdea108998fc8
   - enabled: 1
     path: Assets/Scenes/PuzzleSceneThrowing.unity
     guid: 61f634e528e060743b3f8f66fbb59cdd
   - enabled: 1
-    path: Assets/Scenes/PuzzleSceneCleanUp.unity
-    guid: 40e2dbba98fb0704c984f32f95e564b6
+    path: Assets/Scenes/PuzzleSceneSprinting.unity
+    guid: 75f5f19e5e7de2b4ca1582aa42df98c1
+  - enabled: 1
+    path: Assets/Scenes/PuzzleSceneItemJump.unity
+    guid: af5ad1f6944853546936fd46a0a7bb66
   - enabled: 1
     path: Assets/Scenes/LastPuzzleScene.unity
     guid: 6073ee2946fd0fe41acd003ce32abdc2
@@ -41,9 +50,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Credits.unity
     guid: d295e157f1b3a3547b3635d134027e21
-  - enabled: 1
-    path: Assets/Scenes/PuzzleSceneInteracting.unity
-    guid: 4942896fbc4ab074295cdea108998fc8
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 9e7be553448fa2546aea5752021cbcf7,
       type: 2}
