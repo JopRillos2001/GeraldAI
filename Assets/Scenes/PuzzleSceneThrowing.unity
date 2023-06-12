@@ -6215,7 +6215,7 @@ MonoBehaviour:
   parameterName: Talking
   isTriggerNotBool: 0
   desiredState: 0
-  secondsUntilEvent: 11
+  secondsUntilEvent: 12
   playSound: 0
   clipTrue: {fileID: 0}
   clipFalse: {fileID: 0}
