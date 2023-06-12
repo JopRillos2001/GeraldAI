@@ -83,6 +83,12 @@ MonoBehaviour:
     sceneId: 10
   - scene: 17
     sceneId: 11
+  - scene: 5
+    sceneId: 12
+  - scene: 8
+    sceneId: 13
+  - scene: 9
+    sceneId: 14
 --- !u!114 &79796610927403466
 MonoBehaviour:
   m_ObjectHideFlags: 0
