@@ -2641,22 +2641,22 @@ PrefabInstance:
     - target: {fileID: 5949759676726401349, guid: 4a8d97101b883ee40954c7618e546584,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5949759676726401349, guid: 4a8d97101b883ee40954c7618e546584,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5949759676726401349, guid: 4a8d97101b883ee40954c7618e546584,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 230.4
       objectReference: {fileID: 0}
     - target: {fileID: 5949759676726401349, guid: 4a8d97101b883ee40954c7618e546584,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -97.89
       objectReference: {fileID: 0}
     - target: {fileID: 8580197035893285634, guid: 4a8d97101b883ee40954c7618e546584,
         type: 3}
@@ -5010,7 +5010,7 @@ PrefabInstance:
         type: 3}
       propertyPath: clips.Array.data[0].clip
       value: 
-      objectReference: {fileID: 8300000, guid: 76b8dfe9e2586754ba4ba159458af318, type: 3}
+      objectReference: {fileID: 8300000, guid: f9174d4edb4cb624cb33f36b14dc1b85, type: 3}
     - target: {fileID: 3589758423588066227, guid: e00040816583ef74db3fad706e09341e,
         type: 3}
       propertyPath: clips.Array.data[0].name
