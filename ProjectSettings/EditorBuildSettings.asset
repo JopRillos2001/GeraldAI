@@ -15,16 +15,16 @@ EditorBuildSettings:
     path: Assets/Scenes/StartScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
-    path: Assets/Scenes/PuzzleScene1.unity
+    path: Assets/Scenes/PuzzleSceneJump.unity
     guid: 2c9aa9e62b25ec848a965ee65d204974
   - enabled: 1
-    path: Assets/Scenes/PuzzleScene2.unity
+    path: Assets/Scenes/PuzzleSceneSprinting.unity
     guid: 75f5f19e5e7de2b4ca1582aa42df98c1
   - enabled: 1
-    path: Assets/Scenes/PuzzleScene4.unity
+    path: Assets/Scenes/PuzzleSceneThrowing.unity
     guid: 61f634e528e060743b3f8f66fbb59cdd
   - enabled: 1
-    path: Assets/Scenes/PuzzleScene5.unity
+    path: Assets/Scenes/PuzzleSceneCleanUp.unity
     guid: 40e2dbba98fb0704c984f32f95e564b6
   - enabled: 1
     path: Assets/Scenes/LastPuzzleScene.unity
