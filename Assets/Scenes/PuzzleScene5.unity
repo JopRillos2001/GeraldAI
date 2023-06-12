@@ -3757,7 +3757,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 6234160100213751880}
-  source: {fileID: 0}
   parameterName: isOpen
   playSound: 1
   clipTrue: {fileID: 8300000, guid: 67de501cd3c2aec4dba622bf8fb061a8, type: 3}
@@ -6352,11 +6351,11 @@ MonoBehaviour:
     faceAnimator: {fileID: 1597502175}
     voiceLines:
     - audioName: Congrats
-      audioClip: {fileID: 8300000, guid: 8f544b90b33cda149b91b467a3cb56af, type: 3}
+      audioClip: {fileID: 8300000, guid: 53ebea6b71cdcc24e9ae5d3347dcbd31, type: 3}
       audioDelay: 0
       faceParameterName: Talking
       faceStartDelay: 0
-      faceEndDelay: 3
+      faceEndDelay: 8
 --- !u!135 &1935662291
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -9029,7 +9028,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 6234160100213751880}
-  source: {fileID: 6234160100213751881}
   parameterName: isOpen
   playSound: 1
   clipTrue: {fileID: 8300000, guid: 67de501cd3c2aec4dba622bf8fb061a8, type: 3}
