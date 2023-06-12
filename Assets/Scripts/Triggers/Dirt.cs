@@ -14,7 +14,7 @@ public class Dirt : MonoBehaviour
         {
             playerInventory.DirtCollected();
             gameObject.SetActive(false);
-            if(playerInventory.NumberOfDirt == 16)
+            if(playerInventory.NumberOfDirt == 17)
             {
                 triggerManager.DirtCollected();
             }

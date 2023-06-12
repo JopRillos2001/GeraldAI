@@ -9,6 +9,7 @@ public class AllDirtCollectedTrigger : MonoBehaviour
     [SerializeField] private bool playSound;
     [SerializeField] private AudioClip clipTrue;
     [SerializeField] private AudioClip clipFalse;
+    [SerializeField] private float executeDelay;
 
     private void Start()
     {
@@ -19,7 +20,7 @@ public class AllDirtCollectedTrigger : MonoBehaviour
 
     public void DirtCollected()
     {
-        Invoke("ExecuteEvent",5);
+        Invoke("ExecuteEvent", executeDelay);
     }
 
     private void ExecuteEvent()
