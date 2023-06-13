@@ -23,9 +23,6 @@ namespace StarterAssets {
         [Range(0.0f, 0.3f)]
         public float RotationSmoothTime = 0.12f;
 
-        [Tooltip("Rotation speed of the character")]
-        public float RotationSpeed = 1.0f;
-
         [Tooltip("Acceleration and deceleration")]
         public float SpeedChangeRate = 10.0f;
 
@@ -211,8 +208,8 @@ namespace StarterAssets {
                 //Don't multiply mouse input by Time.deltaTime
                 float deltaTimeMultiplier = IsCurrentDeviceMouse ? 1.0f : Time.deltaTime;
 
-                _cinemachineTargetPitch += _input.look.y * RotationSpeed * deltaTimeMultiplier;
-                _rotationVelocity = _input.look.x * RotationSpeed * deltaTimeMultiplier;
+                _cinemachineTargetPitch += _input.look.y * GameManager.Instance.GetComponent<ProgressManager>().RotationSpeed * deltaTimeMultiplier;
+                _rotationVelocity = _input.look.x * GameManager.Instance.GetComponent<ProgressManager>().RotationSpeed * deltaTimeMultiplier;
 
                 // clamp our pitch rotation
                 _cinemachineTargetPitch = ClampAngle(_cinemachineTargetPitch, BottomClamp, TopClamp);
@@ -400,6 +397,7 @@ namespace StarterAssets {
             if (_input.pause && !pauseToggleCheck) {
                 GameManager.Instance.GetComponent<ProgressManager>().DiscoverMechanic(MechanicEnum.Pause);
                 generalUIManager.ToggleMenu();
+                GameManager.Instance.GetComponent<ProgressManager>().saveProgress();
                 pauseToggleCheck = true;
             }
             if (!_input.pause && pauseToggleCheck) {

@@ -6588,6 +6588,21 @@ PrefabInstance:
       propertyPath: buttonScene
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 1266611898691711262, guid: 4a8d97101b883ee40954c7618e546584,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1266611898691711262, guid: 4a8d97101b883ee40954c7618e546584,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1457326083180473907, guid: 4a8d97101b883ee40954c7618e546584,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.0009918213
+      objectReference: {fileID: 0}
     - target: {fileID: 2739901026824112117, guid: 4a8d97101b883ee40954c7618e546584,
         type: 3}
       propertyPath: m_Pivot.x
@@ -6691,6 +6706,11 @@ PrefabInstance:
     - target: {fileID: 2739901026824112117, guid: 4a8d97101b883ee40954c7618e546584,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4280442676498066101, guid: 4a8d97101b883ee40954c7618e546584,
+        type: 3}
+      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5949759676726401349, guid: 4a8d97101b883ee40954c7618e546584,

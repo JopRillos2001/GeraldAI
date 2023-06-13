@@ -12,6 +12,7 @@ public class ProgressManager : MonoBehaviour
     public List<MechanicClass> mechanics;
     public SceneEnum currentScene = SceneEnum.Ad;
     public SceneEnum previousScene = SceneEnum.Ad;
+    public float RotationSpeed = 1;
     private Animator animator;
     private Queue<MechanicClass> mNotifyQueue = new Queue<MechanicClass>();
     private bool notificationAnimating;
@@ -84,7 +85,7 @@ public class ProgressManager : MonoBehaviour
         string path = Application.persistentDataPath + filePath;
         FileStream stream = new FileStream(path, FileMode.Create);
 
-        Progress data = new Progress(mechanics, currentScene, previousScene);
+        Progress data = new Progress(mechanics, currentScene, previousScene, RotationSpeed);
 
         formatter.Serialize(stream, data);
         stream.Close();
@@ -103,6 +104,7 @@ public class ProgressManager : MonoBehaviour
             mechanics = data.mechanics;
             currentScene = data.currentScene;
             previousScene = data.previousScene;
+            RotationSpeed = data.RotationSpeed;
         }
     }
 
@@ -121,6 +123,7 @@ public class ProgressManager : MonoBehaviour
         ResetMechanics();
         currentScene = defaultStartScene;
         previousScene = defaultStartScene;
+        RotationSpeed = 1;
         saveProgress();
     }
 }
