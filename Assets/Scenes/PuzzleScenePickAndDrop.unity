@@ -800,6 +800,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1709484119}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &379292431 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1621939745694229343, guid: 5a32de7dccd5e8c4e97cbdadfb52d7eb,
+    type: 3}
+  m_PrefabInstance: {fileID: 792072425242058203}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &404204942
 GameObject:
   m_ObjectHideFlags: 0
@@ -1278,6 +1284,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ded4a2f612997a4ea4eff7e80932e39, type: 3}
+--- !u!1 &694661685 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7987515625431589488, guid: a0de48d6f49f6a24fb0919e916bb27fa,
+    type: 3}
+  m_PrefabInstance: {fileID: 7987515626400454771}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &701634921
 GameObject:
   m_ObjectHideFlags: 0
@@ -2019,6 +2031,41 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 7987515626400454771}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1052801549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 694661685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5ac783c9994329419263cd18f5371f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  voiceSpokesman:
+    npcName: Talk
+    faceAnimator: {fileID: 379292431}
+    voiceLines:
+    - audioName: 
+      audioClip: {fileID: 8300000, guid: 12ec1e4ba5ea8c0438c7fea5c80dfbc4, type: 3}
+      audioDelay: 0
+      faceParameterName: Talking
+      faceStartDelay: 0
+      faceEndDelay: 3.5
+--- !u!135 &1052801550
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 694661685}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 3
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!224 &1058515704 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1595803268265117618, guid: fb3a467a9d6952d47bc7957d18ac8428,
@@ -5109,11 +5156,11 @@ MonoBehaviour:
     faceAnimator: {fileID: 792072425242058204}
     voiceLines:
     - audioName: Greet
-      audioClip: {fileID: 0}
+      audioClip: {fileID: 8300000, guid: e44dc53a8eb5ca64a980a01fe3787545, type: 3}
       audioDelay: 0
       faceParameterName: Talking
       faceStartDelay: 0
-      faceEndDelay: 6.5
+      faceEndDelay: 2
 --- !u!135 &9214603950675889455
 SphereCollider:
   m_ObjectHideFlags: 0

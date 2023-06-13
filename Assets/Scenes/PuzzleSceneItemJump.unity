@@ -2788,7 +2788,7 @@ MonoBehaviour:
     faceAnimator: {fileID: 1579028445}
     voiceLines:
     - audioName: Instruct
-      audioClip: {fileID: 8300000, guid: ec847a982fe2ac545a0e6a6d52fe2c9b, type: 3}
+      audioClip: {fileID: 8300000, guid: 2480066f49b32944199dadce35081147, type: 3}
       audioDelay: 0
       faceParameterName: Talking
       faceStartDelay: 0
@@ -3246,22 +3246,22 @@ PrefabInstance:
     - target: {fileID: 5949759676726401349, guid: 4a8d97101b883ee40954c7618e546584,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5949759676726401349, guid: 4a8d97101b883ee40954c7618e546584,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5949759676726401349, guid: 4a8d97101b883ee40954c7618e546584,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 230.4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5949759676726401349, guid: 4a8d97101b883ee40954c7618e546584,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -97.89
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7668618366273345527, guid: 4a8d97101b883ee40954c7618e546584,
         type: 3}
@@ -5658,11 +5658,11 @@ MonoBehaviour:
     faceAnimator: {fileID: 1555347788}
     voiceLines:
     - audioName: Greet
-      audioClip: {fileID: 8300000, guid: 928e3e8062e67e3429486483ddc33c48, type: 3}
+      audioClip: {fileID: 8300000, guid: 8851a7b9c03bc0247a1aaacd6c5d869b, type: 3}
       audioDelay: 0
       faceParameterName: Talking
       faceStartDelay: 0
-      faceEndDelay: 3
+      faceEndDelay: 5
 --- !u!1001 &9214603950675889452
 PrefabInstance:
   m_ObjectHideFlags: 0
