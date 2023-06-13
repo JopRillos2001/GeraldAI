@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -18,10 +19,12 @@ public class MainMenuHandler : MonoBehaviour
         if (progressManager.checkProgress())
         {
             continueButton.interactable = true;
+            continueButton.transform.GetChild(0).GetComponent<TMP_Text>().color = Color.white;
         }
         else
         {
             continueButton.interactable = false;
+            continueButton.transform.GetChild(0).GetComponent<TMP_Text>().color = Color.gray;
         }
     }
 
