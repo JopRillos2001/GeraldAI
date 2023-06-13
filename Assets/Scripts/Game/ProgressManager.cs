@@ -1,17 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
 using TMPro;
 using UnityEngine;
 
 public class ProgressManager : MonoBehaviour
 {
+    private SceneEnum defaultStartScene = SceneEnum.Ad;
     public List<MechanicClass> mechanics;
-    public SceneEnum currentScene = SceneEnum.SplashScreen;
-    public SceneEnum previousScene = SceneEnum.SplashScreen;
+    public SceneEnum currentScene = SceneEnum.Ad;
+    public SceneEnum previousScene = SceneEnum.Ad;
     private Animator animator;
     private Queue<MechanicClass> mNotifyQueue = new Queue<MechanicClass>();
     private bool notificationAnimating;
+    private string filePath = "/progress.geraldai";
 
     private void Start() {
         currentScene = GetComponent<SceneHandler>().getCurrentScene();
@@ -71,5 +75,51 @@ public class ProgressManager : MonoBehaviour
             output += c;
         }
         return output;
+    }
+
+    public void saveProgress()
+    {
+        BinaryFormatter formatter = new BinaryFormatter();
+        string path = Application.persistentDataPath + filePath;
+        FileStream stream = new FileStream(path, FileMode.Create);
+
+        Progress data = new Progress(mechanics, currentScene, previousScene);
+
+        formatter.Serialize(stream, data);
+        stream.Close();
+    }
+    public void loadProgress()
+    {
+        string path = Application.persistentDataPath + filePath;
+        if (File.Exists(path))
+        {
+            BinaryFormatter formatter = new BinaryFormatter();
+            FileStream stream = new FileStream(path, FileMode.Open);
+
+            Progress data = formatter.Deserialize(stream) as Progress;
+            stream.Close();
+
+            mechanics = data.mechanics;
+            currentScene = data.currentScene;
+            previousScene = data.previousScene;
+        }
+    }
+
+    public bool checkProgress()
+    {
+        string path = Application.persistentDataPath + filePath;
+        if (File.Exists(path))
+        {
+            return true;
+        }
+        return false;
+    }
+
+    public void resetProgress()
+    {
+        ResetMechanics();
+        currentScene = defaultStartScene;
+        previousScene = defaultStartScene;
+        saveProgress();
     }
 }

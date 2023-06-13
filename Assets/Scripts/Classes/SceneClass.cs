@@ -7,4 +7,5 @@ public class SceneClass
 {
     public SceneEnum scene;
     public int sceneId;
+    public bool inGame;
 }

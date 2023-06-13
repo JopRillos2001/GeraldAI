@@ -28,7 +28,9 @@ public class SceneHandler : MonoBehaviour
         StopAllCoroutines();
         SceneManager.LoadScene(scenes.Where(r => r.scene == sceneToLoad).First().sceneId);
         GameManager.Instance.GetComponent<ProgressManager>().previousScene = GameManager.Instance.GetComponent<ProgressManager>().currentScene;
-        GameManager.Instance.GetComponent<ProgressManager>().currentScene = sceneToLoad;
+        if (scenes.Where(r => r.scene == sceneToLoad).First().inGame) {
+            GameManager.Instance.GetComponent<ProgressManager>().currentScene = sceneToLoad;
+        }
     }
 
     private void quit() {
