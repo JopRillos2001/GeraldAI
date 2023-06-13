@@ -15,6 +15,6 @@ public class InventoryUI : MonoBehaviour
 
     public void UpdateDirtText(PlayerInventory playerInventory)
     {
-        dirtText.text = playerInventory.NumberOfDirt.ToString();
+        dirtText.text = playerInventory.NumberOfDirt.ToString() + "/17";
     }
 }
