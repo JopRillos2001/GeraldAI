@@ -3246,22 +3246,22 @@ PrefabInstance:
     - target: {fileID: 5949759676726401349, guid: 4a8d97101b883ee40954c7618e546584,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5949759676726401349, guid: 4a8d97101b883ee40954c7618e546584,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5949759676726401349, guid: 4a8d97101b883ee40954c7618e546584,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 230.4
       objectReference: {fileID: 0}
     - target: {fileID: 5949759676726401349, guid: 4a8d97101b883ee40954c7618e546584,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -97.89
       objectReference: {fileID: 0}
     - target: {fileID: 7668618366273345527, guid: 4a8d97101b883ee40954c7618e546584,
         type: 3}
@@ -3951,7 +3951,7 @@ MonoBehaviour:
     faceAnimator: {fileID: 1597502175}
     voiceLines:
     - audioName: Congrats
-      audioClip: {fileID: 8300000, guid: 8f544b90b33cda149b91b467a3cb56af, type: 3}
+      audioClip: {fileID: 8300000, guid: 125e1bc75d53fa34daac1f0177a190cf, type: 3}
       audioDelay: 0
       faceParameterName: Talking
       faceStartDelay: 0

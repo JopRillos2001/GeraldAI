@@ -8094,7 +8094,7 @@ MonoBehaviour:
     faceAnimator: {fileID: 1597502175}
     voiceLines:
     - audioName: Congrats
-      audioClip: {fileID: 8300000, guid: 8f544b90b33cda149b91b467a3cb56af, type: 3}
+      audioClip: {fileID: 8300000, guid: 6d2f69aed0414414685b95e1b5f7782e, type: 3}
       audioDelay: 0
       faceParameterName: Talking
       faceStartDelay: 0

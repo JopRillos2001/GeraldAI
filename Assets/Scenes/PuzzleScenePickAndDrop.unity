@@ -4234,7 +4234,7 @@ PrefabInstance:
     - target: {fileID: 3158183040518146239, guid: e00040816583ef74db3fad706e09341e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.8852754
+      value: 4.033
       objectReference: {fileID: 0}
     - target: {fileID: 3158183040518146239, guid: e00040816583ef74db3fad706e09341e,
         type: 3}
@@ -4244,7 +4244,7 @@ PrefabInstance:
     - target: {fileID: 3158183040518146239, guid: e00040816583ef74db3fad706e09341e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 8.675437
+      value: 8.379
       objectReference: {fileID: 0}
     - target: {fileID: 3158183040518146239, guid: e00040816583ef74db3fad706e09341e,
         type: 3}
@@ -4285,6 +4285,11 @@ PrefabInstance:
         type: 3}
       propertyPath: MaxDistance
       value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6779351938032815939, guid: e00040816583ef74db3fad706e09341e,
+        type: 3}
+      propertyPath: MinDistance
+      value: 1.011368
       objectReference: {fileID: 0}
     - target: {fileID: 6779351938032815939, guid: e00040816583ef74db3fad706e09341e,
         type: 3}
@@ -4508,6 +4513,47 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e00040816583ef74db3fad706e09341e, type: 3}
+--- !u!1 &3158183040877172887 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3158183040518146238, guid: e00040816583ef74db3fad706e09341e,
+    type: 3}
+  m_PrefabInstance: {fileID: 3158183040877172886}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3158183040877172888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3158183040877172887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5ac783c9994329419263cd18f5371f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  voiceSpokesman:
+    npcName: Susan
+    faceAnimator: {fileID: 0}
+    voiceLines:
+    - audioName: Greet
+      audioClip: {fileID: 8300000, guid: 84a65124c9a34dc4c945f7043e24903e, type: 3}
+      audioDelay: 0
+      faceParameterName: Talking
+      faceStartDelay: 0
+      faceEndDelay: 2
+--- !u!135 &3158183040877172889
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3158183040877172887}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 3
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &4091659638733654229
 PrefabInstance:
   m_ObjectHideFlags: 0
