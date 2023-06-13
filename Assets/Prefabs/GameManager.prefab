@@ -94,13 +94,13 @@ MonoBehaviour:
     inGame: 1
   - scene: 15
     sceneId: 11
-    inGame: 0
+    inGame: 1
   - scene: 16
     sceneId: 12
-    inGame: 0
+    inGame: 1
   - scene: 14
     sceneId: 13
-    inGame: 0
+    inGame: 1
   - scene: 17
     sceneId: 14
     inGame: 0
