@@ -8,7 +8,7 @@ using UnityEngine;
 
 public class ProgressManager : MonoBehaviour
 {
-    private SceneEnum defaultStartScene = SceneEnum.Ad;
+    public SceneEnum defaultStartScene = SceneEnum.Ad;
     public List<MechanicClass> mechanics;
     public SceneEnum currentScene = SceneEnum.Ad;
     public SceneEnum previousScene = SceneEnum.Ad;
@@ -35,6 +35,7 @@ public class ProgressManager : MonoBehaviour
             else
                 discoveredMechanic.discoverOrder = 1;
         }
+        GameManager.Instance.GetComponent<ProgressManager>().saveProgress();
     }
 
     public void ResetMechanics() {

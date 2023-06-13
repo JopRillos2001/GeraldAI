@@ -31,6 +31,7 @@ public class SceneHandler : MonoBehaviour
         if (scenes.Where(r => r.scene == sceneToLoad).First().inGame) {
             GameManager.Instance.GetComponent<ProgressManager>().currentScene = sceneToLoad;
         }
+        GameManager.Instance.GetComponent<ProgressManager>().saveProgress();
     }
 
     private void quit() {
