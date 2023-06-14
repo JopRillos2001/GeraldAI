@@ -38,4 +38,9 @@ public class MainMenuHandler : MonoBehaviour
         progressManager.resetProgress();
         sceneHandler.SceneLoad(progressManager.defaultStartScene);
     }
+
+    public void quitGame()
+    {
+        GameManager.Instance.GetComponent<SceneHandler>().QuitGame();
+    }
 }
