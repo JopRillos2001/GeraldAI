@@ -20,6 +20,7 @@ public class GeneralUIManager : MonoBehaviour
 
     public void updateMechanicsView() {
         List<MechanicClass> mechanicItems = GameManager.Instance.GetComponent<ProgressManager>().mechanics.Where(r => r.discovered == true).OrderBy(r => r.discoverOrder).ToList();
+        List<MechanicClass> unlearnedMechanicItems = GameManager.Instance.GetComponent<ProgressManager>().mechanics.Where(r => r.discovered == false).OrderBy(r => r.discoverOrder).ToList();
         foreach (Transform item in mechanicsContent) {
             Destroy(item.gameObject);
         }
@@ -31,6 +32,15 @@ public class GeneralUIManager : MonoBehaviour
 
             mechanicItemName.text = mechanicItem.mechanicName;
             mechanicItemDesc.text = mechanicItem.mechanicDesc;
+        }
+        foreach (MechanicClass mechanicItem in unlearnedMechanicItems) {
+            GameObject obj = Instantiate(mechanicsItem, mechanicsContent);
+
+            TMP_Text mechanicItemName = obj.transform.GetChild(0).GetChild(0).GetComponent<TMP_Text>();
+            TMP_Text mechanicItemDesc = obj.transform.GetChild(1).GetChild(0).GetComponent<TMP_Text>();
+
+            mechanicItemName.text = "???";
+            mechanicItemDesc.text = "Undiscovered";
         }
     }
 
