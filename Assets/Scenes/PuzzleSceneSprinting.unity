@@ -1714,6 +1714,16 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1266611898691711262, guid: 4a8d97101b883ee40954c7618e546584,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1266611898691711262, guid: 4a8d97101b883ee40954c7618e546584,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2739901026824112117, guid: 4a8d97101b883ee40954c7618e546584,
         type: 3}
       propertyPath: m_Pivot.x
@@ -1822,22 +1832,22 @@ PrefabInstance:
     - target: {fileID: 5949759676726401349, guid: 4a8d97101b883ee40954c7618e546584,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5949759676726401349, guid: 4a8d97101b883ee40954c7618e546584,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5949759676726401349, guid: 4a8d97101b883ee40954c7618e546584,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 230.4
       objectReference: {fileID: 0}
     - target: {fileID: 5949759676726401349, guid: 4a8d97101b883ee40954c7618e546584,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -97.89
       objectReference: {fileID: 0}
     - target: {fileID: 8580197035893285634, guid: 4a8d97101b883ee40954c7618e546584,
         type: 3}
@@ -6031,13 +6041,27 @@ MonoBehaviour:
   voiceSpokesman:
     npcName: Greet
     faceAnimator: {fileID: 792072425242058206}
+    bubble: {fileID: 3158183040877172890}
     voiceLines:
     - audioName: Info
       audioClip: {fileID: 8300000, guid: 3911d07ab222eed4a9186f98c8548bf8, type: 3}
       audioDelay: 0
       faceParameterName: Talking
       faceStartDelay: 0.5
-      faceEndDelay: 5
+      faceLength: 4.5
+    voiceBubbles:
+    - voiceText: Wow, you managed to get here!
+      bubbleStartDelay: 0.5
+      bubbleLength: 2.5
+    - voiceText: Now put the bowls on their spots.
+      bubbleStartDelay: 3
+      bubbleLength: 2
+--- !u!224 &3158183040877172890 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4346896275534001926, guid: e00040816583ef74db3fad706e09341e,
+    type: 3}
+  m_PrefabInstance: {fileID: 3158183040877172886}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3254409965609437209
 Transform:
   m_ObjectHideFlags: 0
@@ -6769,13 +6793,18 @@ MonoBehaviour:
   voiceSpokesman:
     npcName: Peter
     faceAnimator: {fileID: 792072425242058205}
+    bubble: {fileID: 7987515626400454775}
     voiceLines:
     - audioName: Warn
       audioClip: {fileID: 8300000, guid: a38422cdf3febe641a7f75c107141ecb, type: 3}
       audioDelay: 0
       faceParameterName: Talking
       faceStartDelay: 0
-      faceEndDelay: 2.5
+      faceLength: 2.5
+    voiceBubbles:
+    - voiceText: Be careful! Try not to fall.
+      bubbleStartDelay: 0
+      bubbleLength: 2.5
 --- !u!135 &7987515626400454774
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -6789,6 +6818,12 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 3
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!224 &7987515626400454775 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 66034886699293805, guid: a0de48d6f49f6a24fb0919e916bb27fa,
+    type: 3}
+  m_PrefabInstance: {fileID: 7987515626400454771}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8123707553650368807 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1107302227272166411, guid: c9f263dc2c2cf03449496b44d5fe86db,
@@ -6937,13 +6972,24 @@ MonoBehaviour:
   voiceSpokesman:
     npcName: Carlo
     faceAnimator: {fileID: 792072425242058204}
+    bubble: {fileID: 9214603950675889456}
     voiceLines:
     - audioName: Hint
       audioClip: {fileID: 8300000, guid: 60aced5f935ca5046b77262a217b4375, type: 3}
       audioDelay: 0
       faceParameterName: Talking
       faceStartDelay: 0
-      faceEndDelay: 5.4
+      faceLength: 5.5
+    voiceBubbles:
+    - voiceText: You see that flowerpot on top of the bookshelf?
+      bubbleStartDelay: 0
+      bubbleLength: 2.5
+    - voiceText: Try grabbing it by jumping.
+      bubbleStartDelay: 2.5
+      bubbleLength: 1.5
+    - voiceText: You can thank me later.
+      bubbleStartDelay: 4
+      bubbleLength: 1.5
 --- !u!135 &9214603950675889455
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -6957,3 +7003,9 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 3
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!224 &9214603950675889456 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4391329190029693681, guid: c9f263dc2c2cf03449496b44d5fe86db,
+    type: 3}
+  m_PrefabInstance: {fileID: 9214603950675889452}
+  m_PrefabAsset: {fileID: 0}

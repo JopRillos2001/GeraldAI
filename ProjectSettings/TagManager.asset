@@ -10,6 +10,7 @@ TagManager:
   - CollectableTrigger
   - Collectable
   - SceneManager
+  - BubbleCanvas
   layers:
   - Default
   - TransparentFX
