@@ -2390,6 +2390,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a5b7a0731a73d94fa8279e9948d69f3, type: 3}
+--- !u!224 &1052307415 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 66034886699293805, guid: a0de48d6f49f6a24fb0919e916bb27fa,
+    type: 3}
+  m_PrefabInstance: {fileID: 7987515626400454771}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1052801540 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7987515625431589495, guid: a0de48d6f49f6a24fb0919e916bb27fa,
@@ -2927,6 +2933,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1387962892}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!224 &1420404845 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4346896275534001926, guid: e00040816583ef74db3fad706e09341e,
+    type: 3}
+  m_PrefabInstance: {fileID: 3158183040877172886}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1481163692 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7987515625431589488, guid: a0de48d6f49f6a24fb0919e916bb27fa,
@@ -2948,13 +2960,21 @@ MonoBehaviour:
   voiceSpokesman:
     npcName: Peter
     faceAnimator: {fileID: 1579028445}
+    bubble: {fileID: 1052307415}
     voiceLines:
     - audioName: Instruct
       audioClip: {fileID: 8300000, guid: ec847a982fe2ac545a0e6a6d52fe2c9b, type: 3}
       audioDelay: 0
       faceParameterName: Talking
       faceStartDelay: 0
-      faceEndDelay: 4
+      faceLength: 3.5
+    voiceBubbles:
+    - voiceText: There is some stuff in the way, Gerald.
+      bubbleStartDelay: 0
+      bubbleLength: 2.5
+    - voiceText: Get over it!
+      bubbleStartDelay: 2.5
+      bubbleLength: 1
 --- !u!135 &1481163702
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3630,6 +3650,16 @@ PrefabInstance:
         type: 3}
       propertyPath: buttonScene
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1266611898691711262, guid: 4a8d97101b883ee40954c7618e546584,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1266611898691711262, guid: 4a8d97101b883ee40954c7618e546584,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2739901026824112117, guid: 4a8d97101b883ee40954c7618e546584,
         type: 3}
@@ -4618,13 +4648,21 @@ MonoBehaviour:
   voiceSpokesman:
     npcName: Susan
     faceAnimator: {fileID: 1597502175}
+    bubble: {fileID: 1420404845}
     voiceLines:
     - audioName: Congrats
       audioClip: {fileID: 8300000, guid: 7cb42df9de711cc4ab32c21d098d70db, type: 3}
       audioDelay: 0
       faceParameterName: Talking
       faceStartDelay: 0
-      faceEndDelay: 7.5
+      faceLength: 7.5
+    voiceBubbles:
+    - voiceText: Nice job, Gerald, good start! You learned how to jump!
+      bubbleStartDelay: 0
+      bubbleLength: 5
+    - voiceText: To see your progress, press E.
+      bubbleStartDelay: 5
+      bubbleLength: 2.5
 --- !u!135 &1935662291
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -4718,6 +4756,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6574141420673273359, guid: 571d9847f93581542a16d2fb44eeafed,
     type: 3}
   m_PrefabInstance: {fileID: 1971493804}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &1983076015 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4391329190029693681, guid: c9f263dc2c2cf03449496b44d5fe86db,
+    type: 3}
+  m_PrefabInstance: {fileID: 9214603950675889452}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1987458104
 GameObject:
@@ -7591,13 +7635,18 @@ MonoBehaviour:
   voiceSpokesman:
     npcName: Carlo
     faceAnimator: {fileID: 1555347788}
+    bubble: {fileID: 1983076015}
     voiceLines:
     - audioName: Greet
       audioClip: {fileID: 8300000, guid: 928e3e8062e67e3429486483ddc33c48, type: 3}
       audioDelay: 0
       faceParameterName: Talking
       faceStartDelay: 0
-      faceEndDelay: 3
+      faceLength: 2.5
+    voiceBubbles:
+    - voiceText: Oh boy! What a lovely day!
+      bubbleStartDelay: 0
+      bubbleLength: 2.5
 --- !u!1 &8300742102055864271
 GameObject:
   m_ObjectHideFlags: 0
