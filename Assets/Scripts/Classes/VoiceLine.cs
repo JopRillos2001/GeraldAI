@@ -10,5 +10,5 @@ public class VoiceLine
     public float audioDelay;
     public string faceParameterName;
     public float faceStartDelay;
-    public float faceEndDelay;
+    public float faceLength;
 }
