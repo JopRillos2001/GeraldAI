@@ -7,6 +7,7 @@ public class WalkInTrigger : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private string parameterName;
     [SerializeField] private float delay;
+    [SerializeField] private bool isTrigger;
     [SerializeField] private bool desiredState;
     [SerializeField] private bool openAndClose;
     [SerializeField] private bool worksOnce;
@@ -40,7 +41,21 @@ public class WalkInTrigger : MonoBehaviour
     }
 
     private void execute() {
-            if (openAndClose) {
+            if (isTrigger)
+            {
+                animator.SetTrigger(parameterName);
+                if (!playSound) return;
+                if (animator.GetBool(parameterName) == true && clipTrue != null)
+                {
+                    animator.GetComponent<AudioSource>().PlayOneShot(clipTrue);
+                }
+                else if (animator.GetBool(parameterName) == false && clipFalse != null)
+                {
+                    animator.GetComponent<AudioSource>().PlayOneShot(clipFalse);
+                }
+            }
+
+            else if (openAndClose) {
                 animator.SetBool(parameterName, !animator.GetBool(parameterName));
                 if (!playSound) return;
                 if (animator.GetBool(parameterName) == true && clipTrue != null) {
