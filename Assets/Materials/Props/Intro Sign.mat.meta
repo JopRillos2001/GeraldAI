@@ -1,9 +1,9 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Assets/Materials/Props/Intro Sign.mat.meta
-guid: 399cbc4169f7cd44991675573e99abf0
+<<<<<<<< HEAD:Assets/Animations/Game/Animations/BlockBridgeFall.anim.meta
+guid: a7efade5ce6bcfe468f82be3b0d8249e
 ========
-guid: 819a8bcb621a11e4ab2ce13e85847106
->>>>>>>> dev:Assets/Animations/Game/Animations/BlockBridgeFall.anim.meta
+guid: 399cbc4169f7cd44991675573e99abf0
+>>>>>>>> explain-mechanics:Assets/Materials/Props/Intro Sign.mat.meta
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 2100000
