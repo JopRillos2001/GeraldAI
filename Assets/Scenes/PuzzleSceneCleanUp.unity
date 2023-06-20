@@ -4894,13 +4894,18 @@ MonoBehaviour:
   voiceSpokesman:
     npcName: Peter
     faceAnimator: {fileID: 1579028445}
+    bubble: {fileID: 7987515626400454772}
     voiceLines:
     - audioName: 
       audioClip: {fileID: 8300000, guid: 68e4bf77656a4044eba85faeb9ac2710, type: 3}
       audioDelay: 0
       faceParameterName: Talking
       faceStartDelay: 0
-      faceEndDelay: 3.4
+      faceLength: 3.5
+    voiceBubbles:
+    - voiceText: It's so dirty in here. Try looking around!
+      bubbleStartDelay: 0
+      bubbleLength: 3.5
 --- !u!135 &1481163702
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -6075,6 +6080,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6551504189659643076, guid: a0836a827fca13c4792a5debe7968fc8,
+        type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 7469093020725902901, guid: a0836a827fca13c4792a5debe7968fc8,
         type: 3}
       propertyPath: m_Name
@@ -7412,13 +7422,18 @@ MonoBehaviour:
   voiceSpokesman:
     npcName: Susan
     faceAnimator: {fileID: 1597502175}
+    bubble: {fileID: 3158183040877172887}
     voiceLines:
     - audioName: Congrats
       audioClip: {fileID: 8300000, guid: 53ebea6b71cdcc24e9ae5d3347dcbd31, type: 3}
       audioDelay: 0
       faceParameterName: Talking
       faceStartDelay: 0
-      faceEndDelay: 7
+      faceLength: 5.5
+    voiceBubbles:
+    - voiceText: Did you find all the dirt? You need to clean 17 patches of dirt.
+      bubbleStartDelay: 0
+      bubbleLength: 5.5
 --- !u!135 &1935662291
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -9201,6 +9216,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1987458105}
     m_Modifications:
+    - target: {fileID: 651466101182413569, guid: e00040816583ef74db3fad706e09341e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3158183040518146238, guid: e00040816583ef74db3fad706e09341e,
         type: 3}
       propertyPath: m_Name
@@ -9260,6 +9280,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4101143721334271015, guid: e00040816583ef74db3fad706e09341e,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4478702815005933686, guid: e00040816583ef74db3fad706e09341e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4527528063672952914, guid: e00040816583ef74db3fad706e09341e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6779351938032815939, guid: e00040816583ef74db3fad706e09341e,
         type: 3}
@@ -9488,6 +9523,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e00040816583ef74db3fad706e09341e, type: 3}
+--- !u!224 &3158183040877172887 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4346896275534001926, guid: e00040816583ef74db3fad706e09341e,
+    type: 3}
+  m_PrefabInstance: {fileID: 3158183040877172886}
+  m_PrefabAsset: {fileID: 0}
 --- !u!65 &3161613793511007078
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10477,6 +10518,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1987458105}
     m_Modifications:
+    - target: {fileID: 1225959288892790500, guid: a0de48d6f49f6a24fb0919e916bb27fa,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 1615596534644091397, guid: a0de48d6f49f6a24fb0919e916bb27fa,
         type: 3}
       propertyPath: MaxDistance
@@ -10702,6 +10748,11 @@ PrefabInstance:
       propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
       value: 0.9916687
       objectReference: {fileID: 0}
+    - target: {fileID: 4718186543949157132, guid: a0de48d6f49f6a24fb0919e916bb27fa,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7987515625431589488, guid: a0de48d6f49f6a24fb0919e916bb27fa,
         type: 3}
       propertyPath: m_Name
@@ -10762,8 +10813,19 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9020636629942935117, guid: a0de48d6f49f6a24fb0919e916bb27fa,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0de48d6f49f6a24fb0919e916bb27fa, type: 3}
+--- !u!224 &7987515626400454772 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 66034886699293805, guid: a0de48d6f49f6a24fb0919e916bb27fa,
+    type: 3}
+  m_PrefabInstance: {fileID: 7987515626400454771}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &8059837771749437519
 GameObject:
   m_ObjectHideFlags: 0
@@ -10817,13 +10879,18 @@ MonoBehaviour:
   voiceSpokesman:
     npcName: Carlo
     faceAnimator: {fileID: 1555347788}
+    bubble: {fileID: 9214603950675889453}
     voiceLines:
     - audioName: Greet
       audioClip: {fileID: 8300000, guid: fee49a65cae5b8d4d96f2ddc0a47d493, type: 3}
       audioDelay: 0
       faceParameterName: Talking
       faceStartDelay: 0
-      faceEndDelay: 2
+      faceLength: 2
+    voiceBubbles:
+    - voiceText: Even the yard is dirty!
+      bubbleStartDelay: 0
+      bubbleLength: 2
 --- !u!1 &8300742102055864271
 GameObject:
   m_ObjectHideFlags: 0
@@ -10894,6 +10961,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1987458105}
     m_Modifications:
+    - target: {fileID: 766437585699278336, guid: c9f263dc2c2cf03449496b44d5fe86db,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 1107302227271843697, guid: c9f263dc2c2cf03449496b44d5fe86db,
         type: 3}
       propertyPath: m_Name
@@ -10954,10 +11026,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5109726061679166016, guid: c9f263dc2c2cf03449496b44d5fe86db,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7541342585724637909, guid: c9f263dc2c2cf03449496b44d5fe86db,
         type: 3}
       propertyPath: MaxDistance
       value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8275868487713688724, guid: c9f263dc2c2cf03449496b44d5fe86db,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8821030611821258594, guid: c9f263dc2c2cf03449496b44d5fe86db,
         type: 3}
@@ -10986,3 +11068,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9f263dc2c2cf03449496b44d5fe86db, type: 3}
+--- !u!224 &9214603950675889453 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4391329190029693681, guid: c9f263dc2c2cf03449496b44d5fe86db,
+    type: 3}
+  m_PrefabInstance: {fileID: 9214603950675889452}
+  m_PrefabAsset: {fileID: 0}
