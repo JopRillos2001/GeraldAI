@@ -7,5 +7,7 @@ public class VoiceSpokesman
 {
     public string npcName;
     public Animator faceAnimator;
+    public Transform bubble;
     public List<VoiceLine> voiceLines;
+    public List<VoiceBubble> voiceBubbles;
 }

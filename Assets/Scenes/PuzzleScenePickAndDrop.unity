@@ -1068,6 +1068,12 @@ Transform:
   m_Father: {fileID: 995280249}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!224 &486634277 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 66034886699293805, guid: a0de48d6f49f6a24fb0919e916bb27fa,
+    type: 3}
+  m_PrefabInstance: {fileID: 7987515626400454771}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &507133317 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 532141326660116192, guid: c83c401b4eef8a84b912d38527c240f7,
@@ -2046,13 +2052,18 @@ MonoBehaviour:
   voiceSpokesman:
     npcName: Talk
     faceAnimator: {fileID: 379292431}
+    bubble: {fileID: 486634277}
     voiceLines:
     - audioName: 
       audioClip: {fileID: 8300000, guid: 12ec1e4ba5ea8c0438c7fea5c80dfbc4, type: 3}
       audioDelay: 0
       faceParameterName: Talking
       faceStartDelay: 0
-      faceEndDelay: 3.5
+      faceLength: 3.5
+    voiceBubbles:
+    - voiceText: Are you sure that you are strong enough to lift them?
+      bubbleStartDelay: 0
+      bubbleLength: 3.5
 --- !u!135 &1052801550
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2071,6 +2082,12 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1595803268265117618, guid: fb3a467a9d6952d47bc7957d18ac8428,
     type: 3}
   m_PrefabInstance: {fileID: 1595803268516031818}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &1068421356 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4391329190029693681, guid: c9f263dc2c2cf03449496b44d5fe86db,
+    type: 3}
+  m_PrefabInstance: {fileID: 9214603950675889452}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1126767557
 PrefabInstance:
@@ -2882,6 +2899,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0836a827fca13c4792a5debe7968fc8, type: 3}
+--- !u!224 &1700026040 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4346896275534001926, guid: e00040816583ef74db3fad706e09341e,
+    type: 3}
+  m_PrefabInstance: {fileID: 3158183040877172886}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1709484119
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3279,6 +3302,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1757896588, guid: 4a8d97101b883ee40954c7618e546584, type: 3}
       propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1266611898691711262, guid: 4a8d97101b883ee40954c7618e546584,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1266611898691711262, guid: 4a8d97101b883ee40954c7618e546584,
+        type: 3}
+      propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2739901026824112117, guid: 4a8d97101b883ee40954c7618e546584,
@@ -4540,13 +4573,18 @@ MonoBehaviour:
   voiceSpokesman:
     npcName: Susan
     faceAnimator: {fileID: 792072425242058205}
+    bubble: {fileID: 1700026040}
     voiceLines:
     - audioName: Greet
       audioClip: {fileID: 8300000, guid: 84a65124c9a34dc4c945f7043e24903e, type: 3}
       audioDelay: 0
       faceParameterName: Talking
       faceStartDelay: 0
-      faceEndDelay: 2
+      faceLength: 3.5
+    voiceBubbles:
+    - voiceText: Looks like each cube is different, you got this!
+      bubbleStartDelay: 0
+      bubbleLength: 3.5
 --- !u!135 &3158183040877172889
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -5206,13 +5244,18 @@ MonoBehaviour:
   voiceSpokesman:
     npcName: Carlo
     faceAnimator: {fileID: 792072425242058204}
+    bubble: {fileID: 1068421356}
     voiceLines:
     - audioName: Greet
       audioClip: {fileID: 8300000, guid: e44dc53a8eb5ca64a980a01fe3787545, type: 3}
       audioDelay: 0
       faceParameterName: Talking
       faceStartDelay: 0
-      faceEndDelay: 2
+      faceLength: 2
+    voiceBubbles:
+    - voiceText: Those are some pretty heavy objects.
+      bubbleStartDelay: 0
+      bubbleLength: 2
 --- !u!135 &9214603950675889455
 SphereCollider:
   m_ObjectHideFlags: 0

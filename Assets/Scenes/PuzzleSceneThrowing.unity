@@ -4155,13 +4155,27 @@ MonoBehaviour:
   voiceSpokesman:
     npcName: Peter
     faceAnimator: {fileID: 792072425242058207}
+    bubble: {fileID: 1029751505}
     voiceLines:
     - audioName: Hint
       audioClip: {fileID: 8300000, guid: 4e9911b61b1f39c49aac9a5b2bbfb703, type: 3}
       audioDelay: 0
-      faceParameterName: 
+      faceParameterName: Talking
       faceStartDelay: 0
-      faceEndDelay: 5.6
+      faceLength: 5.5
+    voiceBubbles:
+    - voiceText: Move the garbage bag from this container to the yellow one
+      bubbleStartDelay: 0
+      bubbleLength: 4
+    - voiceText: on the other side of the room.
+      bubbleStartDelay: 4
+      bubbleLength: 1.5
+--- !u!224 &1029751505 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 66034886699293805, guid: a0de48d6f49f6a24fb0919e916bb27fa,
+    type: 3}
+  m_PrefabInstance: {fileID: 1029751501}
+  m_PrefabAsset: {fileID: 0}
 --- !u!135 &1029751512
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -4851,13 +4865,21 @@ MonoBehaviour:
   voiceSpokesman:
     npcName: Carlo
     faceAnimator: {fileID: 792072425242058205}
+    bubble: {fileID: 1147986017}
     voiceLines:
     - audioName: Hint
       audioClip: {fileID: 8300000, guid: 3bc9bd7d38e57aa4cb3cbce56e896d7d, type: 3}
       audioDelay: 0
       faceParameterName: Talking
       faceStartDelay: 0
-      faceEndDelay: 3.75
+      faceLength: 3.5
+    voiceBubbles:
+    - voiceText: There is a garbage bag located on top of the crates.
+      bubbleStartDelay: 0
+      bubbleLength: 2.5
+    - voiceText: Can you reach it?
+      bubbleStartDelay: 2.5
+      bubbleLength: 1
 --- !u!135 &1147986016
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -4871,6 +4893,12 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 3
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!224 &1147986017 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4391329190029693681, guid: c9f263dc2c2cf03449496b44d5fe86db,
+    type: 3}
+  m_PrefabInstance: {fileID: 1147986012}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1153939215
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5261,6 +5289,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1757896588, guid: 4a8d97101b883ee40954c7618e546584, type: 3}
       propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1266611898691711262, guid: 4a8d97101b883ee40954c7618e546584,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1266611898691711262, guid: 4a8d97101b883ee40954c7618e546584,
+        type: 3}
+      propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2739901026824112117, guid: 4a8d97101b883ee40954c7618e546584,
@@ -7765,13 +7803,21 @@ MonoBehaviour:
   voiceSpokesman:
     npcName: Susan
     faceAnimator: {fileID: 792072425242058206}
+    bubble: {fileID: 1794266760}
     voiceLines:
     - audioName: Hint
       audioClip: {fileID: 8300000, guid: 92990a3093920314b980824fd674b62e, type: 3}
       audioDelay: 0
       faceParameterName: Talking
       faceStartDelay: 0
-      faceEndDelay: 7.5
+      faceLength: 7
+    voiceBubbles:
+    - voiceText: You need to throw the garbage bags
+      bubbleStartDelay: 0
+      bubbleLength: 3.5
+    - voiceText: in the yellow garbage container!
+      bubbleStartDelay: 3.5
+      bubbleLength: 3.5
 --- !u!135 &1794266759
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -7785,6 +7831,12 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 3
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!224 &1794266760 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4346896275534001926, guid: e00040816583ef74db3fad706e09341e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1794266755}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1798113853
 GameObject:
   m_ObjectHideFlags: 0
