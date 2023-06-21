@@ -6724,22 +6724,22 @@ PrefabInstance:
     - target: {fileID: 5949759676726401349, guid: 4a8d97101b883ee40954c7618e546584,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5949759676726401349, guid: 4a8d97101b883ee40954c7618e546584,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5949759676726401349, guid: 4a8d97101b883ee40954c7618e546584,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 230.4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5949759676726401349, guid: 4a8d97101b883ee40954c7618e546584,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -97.89
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7668618366273345527, guid: 4a8d97101b883ee40954c7618e546584,
         type: 3}
@@ -8225,14 +8225,14 @@ MonoBehaviour:
       audioDelay: 0
       faceParameterName: Talking
       faceStartDelay: 0
-      faceLength: 6.5
+      faceLength: 7
     voiceBubbles:
     - voiceText: Once you put every cube on the correct spot
       bubbleStartDelay: 0
       bubbleLength: 3
     - voiceText: It will reveal which key you have to press to open the door.
       bubbleStartDelay: 3
-      bubbleLength: 3.5
+      bubbleLength: 4
 --- !u!135 &1935662291
 SphereCollider:
   m_ObjectHideFlags: 0
