@@ -2284,6 +2284,7 @@ GameObject:
   - component: {fileID: 1288603198}
   - component: {fileID: 1288603199}
   - component: {fileID: 1288603200}
+  - component: {fileID: 1288603201}
   m_Layer: 0
   m_Name: SceneManager
   m_TagString: SceneManager
@@ -2339,6 +2340,18 @@ MonoBehaviour:
     attributeName: isOpen
     audioClip: {fileID: 8300000, guid: 67de501cd3c2aec4dba622bf8fb061a8, type: 3}
     completed: 0
+--- !u!114 &1288603201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1288603197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b4b3eab584a2e9499b18078a6d7e8db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1320978462
 GameObject:
   m_ObjectHideFlags: 0
