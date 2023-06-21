@@ -8221,7 +8221,7 @@ MonoBehaviour:
     bubble: {fileID: 3158183040877172887}
     voiceLines:
     - audioName: Congrats
-      audioClip: {fileID: 8300000, guid: 6d2f69aed0414414685b95e1b5f7782e, type: 3}
+      audioClip: {fileID: 8300000, guid: 491d70ef125e0784ca0b6654359a2e68, type: 3}
       audioDelay: 0
       faceParameterName: Talking
       faceStartDelay: 0
@@ -8230,7 +8230,7 @@ MonoBehaviour:
     - voiceText: Once you put every cube on the correct spot
       bubbleStartDelay: 0
       bubbleLength: 3
-    - voiceText: It will reveal a clue on how to open the door
+    - voiceText: It will reveal which key you have to press to open the door.
       bubbleStartDelay: 3
       bubbleLength: 3
 --- !u!135 &1935662291
