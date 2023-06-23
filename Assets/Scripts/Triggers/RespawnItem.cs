@@ -17,9 +17,13 @@ public class RespawnItem : MonoBehaviour
 
     private void Update() {
         if (transform.position.y < minYLevel) {
-            rb.velocity = Vector3.zero;
-            transform.position = spawnLocation;
-            transform.rotation = spawnRotation;
+            resetItem();
         }
+    }
+
+    public void resetItem() {
+        rb.velocity = Vector3.zero;
+        transform.position = spawnLocation;
+        transform.rotation = spawnRotation;
     }
 }
