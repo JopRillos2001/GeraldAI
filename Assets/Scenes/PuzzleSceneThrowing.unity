@@ -1192,6 +1192,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ad849782ffb6934297b99644a08a653, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  respawning: 0
   minYLevel: -190
 --- !u!54 &357091592
 Rigidbody:
@@ -1223,19 +1224,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 6026590626032697394, guid: a434acaf1c3d5ef4f8af1c661919e9c0, type: 3}
---- !u!114 &357091596
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 357091590}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ad849782ffb6934297b99644a08a653, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minYLevel: -190
 --- !u!1001 &364578595
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2042,6 +2030,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ad849782ffb6934297b99644a08a653, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  respawning: 0
   minYLevel: -190
 --- !u!1001 &422733023
 PrefabInstance:
@@ -5307,6 +5296,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ad849782ffb6934297b99644a08a653, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  respawning: 0
   minYLevel: -190
 --- !u!1001 &1168426703
 PrefabInstance:
@@ -6127,6 +6117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ad849782ffb6934297b99644a08a653, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  respawning: 0
   minYLevel: -190
 --- !u!1001 &1368966278
 PrefabInstance:
@@ -6226,6 +6217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ad849782ffb6934297b99644a08a653, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  respawning: 0
   minYLevel: -190
 --- !u!54 &1368966281
 Rigidbody:
@@ -6263,19 +6255,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1368966278}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1368966286
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1368966279}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ad849782ffb6934297b99644a08a653, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minYLevel: -190
 --- !u!1 &1393354999
 GameObject:
   m_ObjectHideFlags: 0
@@ -7297,6 +7276,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ad849782ffb6934297b99644a08a653, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  respawning: 0
   minYLevel: -190
 --- !u!1001 &1644641991
 PrefabInstance:
