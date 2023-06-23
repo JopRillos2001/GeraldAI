@@ -12,9 +12,17 @@ public class RespawnItemTrigger : MonoBehaviour
             StartCoroutine(RespawnItem(other.GetComponent<RespawnItem>()));
         }
     }
+    private void OnTriggerExit(Collider other) {
+        if (other.GetComponent<RespawnItem>()) {
+
+            other.GetComponent<RespawnItem>().respawning = false;
+        }
+    }
 
     private IEnumerator RespawnItem(RespawnItem respawnItem) {
+        respawnItem.respawning = true;
         yield return new WaitForSeconds(2);
+        if(respawnItem.respawning)
         respawnItem.resetItem();
     }
 }
