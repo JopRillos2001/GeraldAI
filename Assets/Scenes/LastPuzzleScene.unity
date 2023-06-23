@@ -945,14 +945,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 56848641}
-  m_LocalRotation: {x: 0, y: -0, z: 0.7071068, w: -0.7071068}
+  m_LocalRotation: {x: -0.5, y: -0.5, z: 0.5, w: -0.5}
   m_LocalPosition: {x: -20, y: 17.5, z: 17.5}
   m_LocalScale: {x: 0.5, y: 5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 476924340}
   m_RootOrder: 33
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 270}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 270}
 --- !u!64 &56848643
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -974,7 +974,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 56848641}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -987,7 +987,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f10ec6a5e62cb6f44b2630fa5760b0d4, type: 2}
+  - {fileID: 2100000, guid: 0d54e34eb26ea6945a5053d6c9ed2289, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -30127,6 +30127,7 @@ MonoBehaviour:
   animator: {fileID: 1621760402038376174}
   parameterName: isOpen
   delay: 0
+  isTrigger: 0
   desiredState: 0
   openAndClose: 0
   worksOnce: 0
@@ -30161,6 +30162,7 @@ MonoBehaviour:
   animator: {fileID: 109357220}
   parameterName: Down
   delay: 10
+  isTrigger: 0
   desiredState: 1
   openAndClose: 0
   worksOnce: 1
@@ -30182,6 +30184,7 @@ MonoBehaviour:
   animator: {fileID: 792072425242058204}
   parameterName: Talking
   delay: 0.5
+  isTrigger: 0
   desiredState: 1
   openAndClose: 0
   worksOnce: 1
@@ -30219,6 +30222,7 @@ MonoBehaviour:
   animator: {fileID: 792072425242058204}
   parameterName: Talking
   delay: 10.5
+  isTrigger: 0
   desiredState: 0
   openAndClose: 0
   worksOnce: 1
@@ -30256,6 +30260,7 @@ MonoBehaviour:
   animator: {fileID: 103129653}
   parameterName: isOpen
   delay: 5
+  isTrigger: 0
   desiredState: 1
   openAndClose: 0
   worksOnce: 1
@@ -35367,6 +35372,7 @@ MonoBehaviour:
   animator: {fileID: 667843542}
   parameterName: Appear
   delay: 0
+  isTrigger: 0
   desiredState: 1
   openAndClose: 0
   worksOnce: 1
@@ -35388,6 +35394,7 @@ MonoBehaviour:
   animator: {fileID: 792072425242058204}
   parameterName: Talking
   delay: 30
+  isTrigger: 0
   desiredState: 0
   openAndClose: 0
   worksOnce: 1
@@ -35409,6 +35416,7 @@ MonoBehaviour:
   animator: {fileID: 792072425242058204}
   parameterName: Talking
   delay: 5.5
+  isTrigger: 0
   desiredState: 1
   openAndClose: 0
   worksOnce: 1
@@ -35430,6 +35438,7 @@ MonoBehaviour:
   animator: {fileID: 1994578526}
   parameterName: Away
   delay: 4
+  isTrigger: 0
   desiredState: 0
   openAndClose: 0
   worksOnce: 1
@@ -35467,6 +35476,7 @@ MonoBehaviour:
   animator: {fileID: 667843542}
   parameterName: PitOpen
   delay: 30
+  isTrigger: 0
   desiredState: 1
   openAndClose: 0
   worksOnce: 1
@@ -35536,6 +35546,7 @@ MonoBehaviour:
   animator: {fileID: 3847500915085534787}
   parameterName: Gone
   delay: 1
+  isTrigger: 0
   desiredState: 1
   openAndClose: 0
   worksOnce: 1
