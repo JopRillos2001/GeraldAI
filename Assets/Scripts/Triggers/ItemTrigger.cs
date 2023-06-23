@@ -24,4 +24,12 @@ public class ItemTrigger : MonoBehaviour
         if (itemsInTrigger < amountNeeded) requirementComplete = false;
         triggerManager.CheckItemTriggers(groupId);
     }
+
+    public int getAmountNeeded() {
+        return amountNeeded;
+    }
+
+    public int getAmountInTrigger() {
+        return itemsInTrigger;
+    }
 }

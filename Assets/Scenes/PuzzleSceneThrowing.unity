@@ -5003,12 +5003,12 @@ PrefabInstance:
     - target: {fileID: 6843009160552232294, guid: d5cd845de5e81f847b5a29267132626e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.2991029
+      value: 1.275
       objectReference: {fileID: 0}
     - target: {fileID: 6843009160552232294, guid: d5cd845de5e81f847b5a29267132626e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -14.369953
+      value: -14.37
       objectReference: {fileID: 0}
     - target: {fileID: 6843009160552232294, guid: d5cd845de5e81f847b5a29267132626e,
         type: 3}
@@ -5292,6 +5292,7 @@ GameObject:
   - component: {fileID: 1288603198}
   - component: {fileID: 1288603200}
   - component: {fileID: 1288603201}
+  - component: {fileID: 1288603202}
   m_Layer: 0
   m_Name: SceneManager
   m_TagString: Untagged
@@ -5345,6 +5346,20 @@ MonoBehaviour:
     attributeName: isOpen
     audioClip: {fileID: 8300000, guid: 67de501cd3c2aec4dba622bf8fb061a8, type: 3}
     completed: 0
+--- !u!114 &1288603202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1288603197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e183a104b4ad7740b9adf83418057ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countText: {fileID: 0}
+  itemTrigger: {fileID: 0}
 --- !u!1001 &1308281492
 PrefabInstance:
   m_ObjectHideFlags: 0
