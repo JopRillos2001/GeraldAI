@@ -13948,7 +13948,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Marjoleine Boersma
+  m_text: 'BI
+
+    Marjoleine Boersma'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 71ecff869dd03e540bd892d42ca8e725, type: 2}
   m_sharedMaterial: {fileID: 8847065026024377520, guid: 71ecff869dd03e540bd892d42ca8e725,
@@ -17123,7 +17125,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Davide Ambesi
+  m_text: 'Serious Gaming
+
+    Davide Ambesi'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 71ecff869dd03e540bd892d42ca8e725, type: 2}
   m_sharedMaterial: {fileID: 8847065026024377520, guid: 71ecff869dd03e540bd892d42ca8e725,
@@ -19148,7 +19152,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Eefje Gijzen
+  m_text: 'English
+
+    Eefje Gijzen'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 71ecff869dd03e540bd892d42ca8e725, type: 2}
   m_sharedMaterial: {fileID: 8847065026024377520, guid: 71ecff869dd03e540bd892d42ca8e725,
