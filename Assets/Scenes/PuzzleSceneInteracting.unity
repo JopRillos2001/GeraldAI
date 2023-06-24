@@ -1889,6 +1889,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ad849782ffb6934297b99644a08a653, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  respawning: 0
   minYLevel: -190
 --- !u!54 &479371509
 Rigidbody:
@@ -2229,6 +2230,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ad849782ffb6934297b99644a08a653, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  respawning: 0
   minYLevel: -190
 --- !u!54 &648140068
 Rigidbody:
@@ -2796,6 +2798,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ad849782ffb6934297b99644a08a653, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  respawning: 0
   minYLevel: -190
 --- !u!54 &779742051
 Rigidbody:
@@ -4286,6 +4289,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ad849782ffb6934297b99644a08a653, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  respawning: 0
   minYLevel: -190
 --- !u!54 &1116195917
 Rigidbody:
@@ -4574,6 +4578,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ad849782ffb6934297b99644a08a653, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  respawning: 0
   minYLevel: -190
 --- !u!54 &1191582534
 Rigidbody:
@@ -5056,6 +5061,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ad849782ffb6934297b99644a08a653, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  respawning: 0
   minYLevel: -190
 --- !u!54 &1318764364
 Rigidbody:
@@ -5566,6 +5572,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ad849782ffb6934297b99644a08a653, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  respawning: 0
   minYLevel: -190
 --- !u!54 &1477902990
 Rigidbody:
@@ -6148,6 +6155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ad849782ffb6934297b99644a08a653, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  respawning: 0
   minYLevel: -190
 --- !u!54 &1619776178
 Rigidbody:
@@ -6724,22 +6732,22 @@ PrefabInstance:
     - target: {fileID: 5949759676726401349, guid: 4a8d97101b883ee40954c7618e546584,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5949759676726401349, guid: 4a8d97101b883ee40954c7618e546584,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5949759676726401349, guid: 4a8d97101b883ee40954c7618e546584,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 230.4
       objectReference: {fileID: 0}
     - target: {fileID: 5949759676726401349, guid: 4a8d97101b883ee40954c7618e546584,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -97.89
       objectReference: {fileID: 0}
     - target: {fileID: 7668618366273345527, guid: 4a8d97101b883ee40954c7618e546584,
         type: 3}
@@ -7404,6 +7412,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ad849782ffb6934297b99644a08a653, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  respawning: 0
   minYLevel: -190
 --- !u!54 &1866817685
 Rigidbody:
@@ -7751,6 +7760,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ad849782ffb6934297b99644a08a653, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  respawning: 0
   minYLevel: -190
 --- !u!54 &1891090797
 Rigidbody:
